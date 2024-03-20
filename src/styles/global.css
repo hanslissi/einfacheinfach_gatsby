@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Link from Adobe Fonts Web Project */
+@import url('https://use.typekit.net/iwz8ibl.css');
+
+@layer base {
+    h1 {
+        @apply font-fancy text-3xl font-bold;
+    }
+
+    h2 {
+        @apply font-fancy;
+    }
+}
