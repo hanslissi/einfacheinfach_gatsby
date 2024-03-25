@@ -13,4 +13,8 @@
     h2 {
         @apply font-fancy text-4xl;
     }
+
+    p {
+        @apply font-sans text-2xl;
+    }
 }
