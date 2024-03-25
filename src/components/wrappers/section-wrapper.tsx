@@ -6,7 +6,7 @@ interface SectionWrapper {
 
 const SectionWrapper = ({children}: SectionWrapper) => {
     return (
-        <div className="container mx-auto mt-10">
+        <div className="container mx-auto mt-40">
             {children}
         </div>
     )

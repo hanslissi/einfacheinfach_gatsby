@@ -12,8 +12,8 @@ const IndexPage: React.FC<PageProps> = () => {
       <main>
         <Hero />
         <Services />
-        <Team />
         <Work />
+        <Team />
       </main>
     </RootLayout>
   )
