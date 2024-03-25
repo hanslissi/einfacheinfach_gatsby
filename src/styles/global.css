@@ -11,6 +11,6 @@
     }
 
     h2 {
-        @apply font-fancy;
+        @apply font-fancy text-4xl;
     }
 }

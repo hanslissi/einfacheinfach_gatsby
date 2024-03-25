@@ -11,6 +11,9 @@ module.exports = {
         "secondary": "#E2E2E2",
         "beige": "#FFFCEF"
       },
+      borderColor: {
+        DEFAULT: 'black'
+      },
       fontFamily: {
         fancy: ["century-gothic", "Verdana", "sans-serif"],
         sans: ["greycliff-cf", "sans-serif"]

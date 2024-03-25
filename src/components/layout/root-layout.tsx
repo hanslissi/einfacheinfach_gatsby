@@ -8,11 +8,12 @@ interface RootLayoutProps {
 
 const RootLayout = ({ children }: RootLayoutProps) => {
   return (
-    <>
+    <div className="bg-beige">
       <Nav />
       {children}
+      <div className="h-10"></div>
       <Footer />
-    </>
+    </div>
   )
 }
 
