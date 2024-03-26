@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import SectionWrapper from "../../wrappers/section-wrapper";
 import IconInformationCard from "../icon-information-card";
@@ -7,13 +7,16 @@ import VideoIcon from "../../../assets/video_icon.svg";
 import ExclamationMarkIcon from "../../../assets/exclamation_mark_icon.svg";
 
 const Services = () => {
-    const { scrollYProgress } = useScroll();
-    const pathLength = useTransform(scrollYProgress, [0.05, 1], [0, 6]);
+    const ref = useRef(null);
+    const { scrollYProgress } = useScroll({
+        target: ref,
+        offset: ["end end", "start start"]
+    });
 
     return (
         <SectionWrapper>
             <div className="flex flex-col items-center gap-12 md:gap-32">
-                <h1 id="services">Wir erklären - <br />
+                <h1 ref={ref} id="services">Wir erklären - <br />
                     aber <span className="relative inline-block">
                         einfach einfach!
                         <div className="absolute -bottom-[100%] left-0">
@@ -23,7 +26,7 @@ const Services = () => {
                                     stroke="#150FF4"
                                     stroke-width="3"
                                     stroke-linecap="round"
-                                    pathLength={pathLength}
+                                    pathLength={scrollYProgress}
                                 />
                             </motion.svg>
                         </div>
