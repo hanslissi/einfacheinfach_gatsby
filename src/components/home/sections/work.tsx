@@ -16,8 +16,8 @@ const Work = () => {
     const pathLength = useTransform(scrollYProgress, [0, 1], [1, 0]);
 
     return (
-        <SectionWrapper>
-            <h1 className="text-primary font-bold" id="work">Work</h1>
+        <SectionWrapper id="work">
+            <h1 className="text-primary font-bold">Work</h1>
             <p className="mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             <div className="relative w-full mt-5 flex flex-col justify-center gap-10 py-10 md:py-24 md:gap-20 md:px-12 md:mt-24" ref={scrollRef}>
                 <LongCurvyArrrowLineSvg pathLength={pathLength} className="absolute inset-0 z-0 h-full w-full" />

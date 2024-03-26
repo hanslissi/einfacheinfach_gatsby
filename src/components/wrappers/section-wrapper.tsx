@@ -1,15 +1,16 @@
 import React from "react";
 
-interface SectionWrapper {
-    children: React.ReactNode
+interface SectionWrapperProps {
+    children: React.ReactNode;
+    id?: string;
 }
 
-const SectionWrapper = ({children}: SectionWrapper) => {
+const SectionWrapper = ({ children, id }: SectionWrapperProps) => {
     return (
-        <div className="container relative mx-auto mt-12 px-4 sm:px-0 md:mt-40">
+        <section id={id} className="container relative mx-auto mt-12 px-4 sm:px-0 md:mt-40">
             {children}
-        </div>
-    )
-}
+        </section>
+    );
+};
 
 export default SectionWrapper;

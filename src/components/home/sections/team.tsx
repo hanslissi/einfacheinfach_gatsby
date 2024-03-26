@@ -5,9 +5,9 @@ import CharacterCard from "../character-card";
 
 const Team = () => {
     return (
-        <SectionWrapper>
+        <SectionWrapper id="about">
             <div className="flex flex-col gap-10 mt-20 items-center">
-                <h1 id="about">Unser Team</h1>
+                <h1>Unser Team</h1>
                 <div className="w-full grid grid-cols-3 gap-4 md:grid-cols-6 lg:px-20">
                     <CharacterCard
                         name="Jonny"

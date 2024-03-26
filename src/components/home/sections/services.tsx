@@ -14,9 +14,9 @@ const Services = () => {
     });
 
     return (
-        <SectionWrapper>
+        <SectionWrapper id="services">
             <div className="flex flex-col items-center gap-12 md:gap-32">
-                <h1 ref={ref} id="services">Wir erklären - <br />
+                <h1 ref={ref}>Wir erklären - <br />
                     aber <span className="relative inline-block">
                         einfach einfach!
                         <div className="absolute -bottom-[100%] left-0">
