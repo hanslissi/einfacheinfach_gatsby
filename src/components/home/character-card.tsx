@@ -21,12 +21,12 @@ const CharacterCard = ({ name, characterImg }: CharacterCardProps) => {
             >
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-beige"></div>
             </div>
-            <div className="relative p-4 flex flex-row gap-4 items-center">
+            <div className="relative p-2 flex flex-row gap-2 items-center lg:gap-4 lg:p-4">
                 <h2 className="font-bold">{name}</h2>
                 <hr className="border w-full"></hr>
             </div>
             <img
-                className="absolute max-w-none w-[110%] bottom-0 left-1/2 transform -translate-x-1/2"
+                className="w-full transform scale-110 origin-bottom"
                 src={characterImg}
                 alt={name}
             />
