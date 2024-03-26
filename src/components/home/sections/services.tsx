@@ -10,7 +10,7 @@ const Services = () => {
     return (
         <SectionWrapper>
             <div className="flex flex-col gap-32 items-center">
-                <h1>Wir erklären - <br />
+                <h1 id="services">Wir erklären - <br />
                     aber <span className="relative inline-block">
                         einfach einfach!
                         <img src={UnderlineScribbleBigSvg} className="absolute -bottom-[80%] left-0" />
