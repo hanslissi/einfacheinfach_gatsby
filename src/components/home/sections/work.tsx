@@ -10,24 +10,22 @@ const Work = () => {
         <SectionWrapper>
             <h1 className="text-primary font-bold" id="work">Work</h1>
             <p className="mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <div className="flex flex-col gap-10 items-center px-12 mt-24">
-                <div className="w-full flex flex-col justify-center gap-20">
-                    <WorkInformationCard
-                        title="Meldeamt"
-                        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-                        thumbnail={MeldeamtWorkThumbnail}
-                    />
-                    <WorkInformationCard
-                        title="Tim"
-                        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-                        thumbnail={TimWorkThumbnail}
-                    />
-                    <WorkInformationCard
-                        title="Phone"
-                        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-                        thumbnail={PhoneWorkThumbnail}
-                    />
-                </div>
+            <div className="w-full mt-5 flex flex-col justify-center gap-5 md:gap-20 md:px-12 md:mt-24">
+                <WorkInformationCard
+                    title="Meldeamt"
+                    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    thumbnail={MeldeamtWorkThumbnail}
+                />
+                <WorkInformationCard
+                    title="Tim"
+                    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    thumbnail={TimWorkThumbnail}
+                />
+                <WorkInformationCard
+                    title="Phone"
+                    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    thumbnail={PhoneWorkThumbnail}
+                />
             </div>
         </SectionWrapper>
     )
