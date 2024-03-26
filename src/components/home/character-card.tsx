@@ -17,7 +17,7 @@ const CharacterCard = ({ name, characterImg }: CharacterCardProps) => {
         <div className="relative w-full h-full border">
             <div
                 className="absolute left-0 top-0 w-full h-[30%] opacity-20"
-                style={{ backgroundImage: `url(${getRandomPattern()})`, backgroundRepeat: 'repeat' }}
+                style={{ backgroundImage: `url(${getRandomPattern()})`, backgroundRepeat: 'repeat', backgroundSize: '40%'}}
             >
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-beige"></div>
             </div>
