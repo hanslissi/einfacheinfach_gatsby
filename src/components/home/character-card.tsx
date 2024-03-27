@@ -14,7 +14,7 @@ const getRandomPattern = () => patterns[Math.floor(Math.random() * patterns.leng
 
 const CharacterCard = ({ name, characterImg }: CharacterCardProps) => {
     return (
-        <div className="relative w-full h-full border">
+        <div className="relative w-full h-full bg-beige border">
             <div
                 className="absolute left-0 top-0 w-full h-[30%] opacity-20"
                 style={{ backgroundImage: `url(${getRandomPattern()})`, backgroundRepeat: 'repeat', backgroundSize: '40%'}}
