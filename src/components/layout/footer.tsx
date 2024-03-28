@@ -1,5 +1,5 @@
 import React from "react";
-import InstagramLogo from '../../assets/icons/instagram_logo.png';
+import { StaticImage } from "gatsby-plugin-image";
 
 const Footer = () => {
     return (
@@ -11,7 +11,12 @@ const Footer = () => {
             <div className="w-full flex flex-row justify-end">
                 <a href="https://www.instagram.com/einfacheinfach.studio/">
                     <div className="flex flex-row gap-4 items-center">
-                        <img className="h-10" src={InstagramLogo} alt="instagram-logo" />
+                        <div className="h-10">
+                            <StaticImage
+                                src={"../../assets/icons/instagram_logo.png"} 
+                                alt="instagram-logo"
+                            />
+                        </div>
                         einfacheinfach.studio
                     </div>
                 </a>
