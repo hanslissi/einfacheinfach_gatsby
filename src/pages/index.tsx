@@ -5,17 +5,32 @@ import Hero from "../components/home/sections/hero"
 import Services from "../components/home/sections/services"
 import Team from "../components/home/sections/team"
 import Work from "../components/home/sections/work"
+import { NavContext } from "../context/NavContext"
+
 
 const IndexPage: React.FC<PageProps> = () => {
+  const [spread, setSpread] = React.useState<boolean>(true);
+
+
+  const toggleSpread = () => {
+    setSpread(!spread);
+  }
+
+  const setContextSpread = (value: boolean) => {
+    setSpread(value);
+  }
+
   return (
-    <RootLayout>
-      <main>
-        <Hero />
-        <Services />
-        <Work />
-        <Team />
-      </main>
-    </RootLayout>
+    <NavContext.Provider value={{ spread: spread, setSpread: setContextSpread, toggleSpread: toggleSpread }}>
+      <RootLayout>
+        <main>
+          <Hero />
+          <Services />
+          <Work />
+          <Team />
+        </main>
+      </RootLayout>
+    </NavContext.Provider>
   )
 }
 
