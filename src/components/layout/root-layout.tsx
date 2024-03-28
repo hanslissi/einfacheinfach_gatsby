@@ -10,7 +10,9 @@ const RootLayout = ({ children }: RootLayoutProps) => {
   return (
     <div className="bg-beige">
       <Nav />
-      {children}
+      <div className="overflow-hidden">
+        {children}
+      </div>
       <div className="h-10"></div>
       <Footer />
     </div>

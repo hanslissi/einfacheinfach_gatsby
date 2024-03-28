@@ -25,7 +25,10 @@ const Work = () => {
     const pathLength = useTransform(scrollYProgressWorkCardsDiv, [0, 1], [1, 0]);
 
     return (
-        <SectionWrapper id="work" ref={refSection}>
+        <SectionWrapper
+            ref={refSection}
+            id="work"
+        >
             {/* background parallax shapes begin */}
             <motion.div
                 className="absolute -right-10 top-[15%] w-[15%] h-32"
