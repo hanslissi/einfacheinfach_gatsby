@@ -10,21 +10,7 @@ const config: GatsbyConfig = {
   // Learn more at: https://gatsby.dev/graphql-typegen
   graphqlTypegen: true,
   plugins: [
-    `gatsby-plugin-postcss`,
-    `gatsby-plugin-image`,
-    `gatsby-plugin-sharp`,
-    `gatsby-transformer-sharp`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `assets`,
-        path: `${__dirname}/src/assets/`,
-        // Ignore files starting with a dot
-        ignore: [`**/\.*`],
-        // Use "mtime" and "inode" to fingerprint files (to check if file has changed)
-        fastHash: true,
-      },
-    },
+    'gatsby-plugin-postcss'
   ],
 }
 
