@@ -19,8 +19,8 @@ const CharSpreaderSpan = ({ text, spread, calculateSpreadOutValues }: CharSpread
             spreadOut: {
                 ...calculateSpreadOutValues(),
                 transition: {
-                    type: "easeOut",
-                    duration: 0.3,
+                    type: "spring",
+                    duration: 0.5,
                 }
             },
             gather: {
@@ -28,7 +28,7 @@ const CharSpreaderSpan = ({ text, spread, calculateSpreadOutValues }: CharSpread
                 y: 0,
                 rotate: 0,
                 transition: {
-                    type: "easeOut",
+                    type: "easeInOut",
                     duration: 0.3,
                 }
             }

@@ -39,8 +39,8 @@ const Nav = () => {
         // returns a function that calculates random css values for the spread out animation
         return () => {
             return {
-                x: `calc(${Math.random()} * var(${cssVariableMaxScreenX}, -90vw))`,
-                y: `calc(${Math.random()} * 100vh)`,
+                x: `calc(${Math.random()} * var(${cssVariableMaxScreenX}, -80vw))`,
+                y: `calc(${Math.random() - 0.05} * 100vh)`,
                 rotate: (Math.random() * 360)
             }
         }
@@ -54,7 +54,7 @@ const Nav = () => {
             }
         )}>
             <nav className="h-full flex text-primary font-bold flex-row justify-between items-center px-8 md:px-16 md:gap-8 md:justify-end">
-                <a href="#services" className="max-md:[--max-screen-x-services:90vw]"> {/* This sets a css variable that can be used to make the spread out animation responsive */}
+                <a href="#services" className="max-md:[--max-screen-x-services:80vw]"> {/* This sets a css variable that can be used to make the spread out animation responsive */}
                     <span className={clsx({ "text-primary font-bold": activeSection === "services" })}>
                         <CharSpreaderSpan
                             text="services"
@@ -81,7 +81,7 @@ const Nav = () => {
                         />
                     </span>
                 </a>
-                <a href="#contact" className="max-md:[--max-screen-x-contact:-90vw]"> {/* This sets a css variable that can be used to make the spread out animation responsive */}
+                <a href="#contact" className="max-md:[--max-screen-x-contact:-80vw]"> {/* This sets a css variable that can be used to make the spread out animation responsive */}
                     <span className={clsx({ "text-primary font-bold": activeSection === "contact" })}>
                         <CharSpreaderSpan
                             text="contact"
