@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import { useScroll } from "framer-motion";
 import React, { useContext, useEffect, useRef, useState } from "react";
-import CharSpreaderSpan from "../char-spreader-span";
+import CharSpreaderSpan from "../animated-commons/char-spreader-span";
 import { NavContext } from "../../context/NavContext";
 
 const Nav = () => {
