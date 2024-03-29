@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { Variants, motion, useAnimation } from 'framer-motion';
 
 interface CharSpreaderSpanProps {
