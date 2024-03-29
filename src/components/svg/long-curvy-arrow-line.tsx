@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import { MotionValue, motion, useScroll } from "framer-motion";
+import { MotionValue, motion } from "framer-motion";
 import React from "react";
 
 interface LongCurvyArrrowLineSvgProps {

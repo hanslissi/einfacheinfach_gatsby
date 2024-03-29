@@ -53,9 +53,9 @@ const Nav = () => {
                 "sticky": !spread
             }
         )}>
-            <nav className="h-full flex text-primary flex-row justify-between items-center px-8 md:px-16 md:gap-8 md:justify-end">
+            <nav className="h-full flex text-primary font-bold flex-row justify-between items-center px-8 md:px-16 md:gap-8 md:justify-end">
                 <a href="#services" className="max-md:[--max-screen-x-services:90vw]"> {/* This sets a css variable that can be used to make the spread out animation responsive */}
-                    <span className={clsx({ "text-primary": activeSection === "services" })}>
+                    <span className={clsx({ "text-primary font-bold": activeSection === "services" })}>
                         <CharSpreaderSpan
                             text="services"
                             spread={spread}
@@ -64,7 +64,7 @@ const Nav = () => {
                     </span>
                 </a>
                 <a href="#work" className="max-md:[--max-screen-x-work:-30vw]"> {/* This sets a css variable that can be used to make the spread out animation responsive */}
-                    <span className={clsx({ "text-primary": activeSection === "work" })}>
+                    <span className={clsx({ "text-primary font-bold": activeSection === "work" })}>
                         <CharSpreaderSpan
                             text="work"
                             spread={spread}
@@ -73,7 +73,7 @@ const Nav = () => {
                     </span>
                 </a>
                 <a href="#about" className="max-md:[--max-screen-x-about:30vw]"> {/* This sets a css variable that can be used to make the spread out animation responsive */}
-                    <span className={clsx({ "text-primary": activeSection === "about" })}>
+                    <span className={clsx({ "text-primary font-bold": activeSection === "about" })}>
                         <CharSpreaderSpan
                             text="about"
                             spread={spread}
@@ -82,7 +82,7 @@ const Nav = () => {
                     </span>
                 </a>
                 <a href="#contact" className="max-md:[--max-screen-x-contact:-90vw]"> {/* This sets a css variable that can be used to make the spread out animation responsive */}
-                    <span className={clsx({ "text-primary": activeSection === "contact" })}>
+                    <span className={clsx({ "text-primary font-bold": activeSection === "contact" })}>
                         <CharSpreaderSpan
                             text="contact"
                             spread={spread}
