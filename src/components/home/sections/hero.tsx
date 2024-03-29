@@ -27,7 +27,7 @@ const Hero = () => {
 
     return (
         <section className="h-lvh flex justify-center items-center -mt-20">
-            <div className="relative">
+            <div className="relative bg-beige">
                 <img
                     ref={ref}
                     className="cursor-pointer h-12 md:h-20"
