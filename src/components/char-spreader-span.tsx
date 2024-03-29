@@ -4,7 +4,7 @@ import { Variants, motion, useAnimation } from 'framer-motion';
 interface CharSpreaderSpanProps {
     text: string;
     spread: boolean;
-    calculateSpreadOutValues: () => { x: number, y: number, rotate: number };
+    calculateSpreadOutValues: () => { x: number | string, y: number | string, rotate: number };
 }
 
 const CharSpreaderSpan = ({ text, spread, calculateSpreadOutValues }: CharSpreaderSpanProps) => {

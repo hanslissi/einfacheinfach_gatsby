@@ -33,11 +33,13 @@ const Nav = () => {
         });
     }
 
-    const calculateSpreadOutValues = () => {
-        return {
-            x: (Math.random() * -((window.innerWidth / 8) * 7)),
-            y: (Math.random() * ((window.innerHeight / 8) * 7)),
-            rotate: (Math.random() * 360)
+    const calculateSpreadOutValues = (cssVariableMaxScreenX: string, cssVariableMaxScreenY: string) => {
+        return () => {
+            return {
+                x: `calc(${Math.random()} * var(${cssVariableMaxScreenX}, -90vw))`,
+                y: `calc(${Math.random()} * 100vh)`,
+                rotate: (Math.random() * 360)
+            }
         }
     }
 
@@ -49,39 +51,39 @@ const Nav = () => {
             }
         )}>
             <nav className="h-full flex text-primary flex-row justify-between items-center px-8 md:px-16 md:gap-8 md:justify-end">
-                <a href="#services">
+                <a href="#services" className="max-md:[--max-screen-x-services:90vw]"> {/* This sets a css variable that can be used to make the spread out animation responsive */}
                     <span className={clsx({ "text-primary": activeSection === "services" })}>
                         <CharSpreaderSpan
                             text="services"
                             spread={spread}
-                            calculateSpreadOutValues={calculateSpreadOutValues}
+                            calculateSpreadOutValues={calculateSpreadOutValues("--max-screen-x-services", "")}
                         />
                     </span>
                 </a>
-                <a href="#work">
+                <a href="#work" className="max-md:[--max-screen-x-work:-30vw]">
                     <span className={clsx({ "text-primary": activeSection === "work" })}>
                         <CharSpreaderSpan
                             text="work"
                             spread={spread}
-                            calculateSpreadOutValues={calculateSpreadOutValues}
+                            calculateSpreadOutValues={calculateSpreadOutValues("--max-screen-x-work", "")}
                         />
                     </span>
                 </a>
-                <a href="#about">
+                <a href="#about" className="max-md:[--max-screen-x-about:30vw]">
                     <span className={clsx({ "text-primary": activeSection === "about" })}>
                         <CharSpreaderSpan
                             text="about"
                             spread={spread}
-                            calculateSpreadOutValues={calculateSpreadOutValues}
+                            calculateSpreadOutValues={calculateSpreadOutValues("--max-screen-x-about", "")}
                         />
                     </span>
                 </a>
-                <a href="#contact">
+                <a href="#contact" className="max-md:[--max-screen-x-contact:-90vw]">
                     <span className={clsx({ "text-primary": activeSection === "contact" })}>
                         <CharSpreaderSpan
                             text="contact"
                             spread={spread}
-                            calculateSpreadOutValues={calculateSpreadOutValues}
+                            calculateSpreadOutValues={calculateSpreadOutValues("--max-screen-x-contact", "")}
                         />
                     </span>
                 </a>
