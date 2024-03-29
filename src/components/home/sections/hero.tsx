@@ -37,7 +37,7 @@ const Hero = () => {
                 <ScribbleCircleAround
                     className="pointer-events-none absolute w-[150%] -left-1/4 -top-1/3"
                     loop={loopingScribbleCircle}
-                    delay={5}
+                    delay={3}
                 />
             </div>
 
