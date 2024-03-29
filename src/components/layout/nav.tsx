@@ -11,6 +11,7 @@ const Nav = () => {
     const sections = useRef<HTMLElement[]>();
 
     useEffect(() => {
+        // Get all sections on the page and add a scroll listener
         const sectionElements = document.querySelectorAll("section");
         sections.current = Array.from(sectionElements);
         window.addEventListener('scroll', handleScroll);
@@ -23,6 +24,7 @@ const Nav = () => {
     const handleScroll = () => {
         if (!sections.current) return;
 
+        // Check which section is currently in view
         sections.current.forEach((section) => {
             const sectionTop = section.offsetTop;
             const sectionBottom = sectionTop + section.offsetHeight;
@@ -33,7 +35,8 @@ const Nav = () => {
         });
     }
 
-    const calculateSpreadOutValues = (cssVariableMaxScreenX: string, cssVariableMaxScreenY: string) => {
+    const calculateSpreadOutValues = (cssVariableMaxScreenX: string) => {
+        // returns a function that calculates random css values for the spread out animation
         return () => {
             return {
                 x: `calc(${Math.random()} * var(${cssVariableMaxScreenX}, -90vw))`,
@@ -56,34 +59,34 @@ const Nav = () => {
                         <CharSpreaderSpan
                             text="services"
                             spread={spread}
-                            calculateSpreadOutValues={calculateSpreadOutValues("--max-screen-x-services", "")}
+                            calculateSpreadOutValues={calculateSpreadOutValues("--max-screen-x-services")}
                         />
                     </span>
                 </a>
-                <a href="#work" className="max-md:[--max-screen-x-work:-30vw]">
+                <a href="#work" className="max-md:[--max-screen-x-work:-30vw]"> {/* This sets a css variable that can be used to make the spread out animation responsive */}
                     <span className={clsx({ "text-primary": activeSection === "work" })}>
                         <CharSpreaderSpan
                             text="work"
                             spread={spread}
-                            calculateSpreadOutValues={calculateSpreadOutValues("--max-screen-x-work", "")}
+                            calculateSpreadOutValues={calculateSpreadOutValues("--max-screen-x-work")}
                         />
                     </span>
                 </a>
-                <a href="#about" className="max-md:[--max-screen-x-about:30vw]">
+                <a href="#about" className="max-md:[--max-screen-x-about:30vw]"> {/* This sets a css variable that can be used to make the spread out animation responsive */}
                     <span className={clsx({ "text-primary": activeSection === "about" })}>
                         <CharSpreaderSpan
                             text="about"
                             spread={spread}
-                            calculateSpreadOutValues={calculateSpreadOutValues("--max-screen-x-about", "")}
+                            calculateSpreadOutValues={calculateSpreadOutValues("--max-screen-x-about")}
                         />
                     </span>
                 </a>
-                <a href="#contact" className="max-md:[--max-screen-x-contact:-90vw]">
+                <a href="#contact" className="max-md:[--max-screen-x-contact:-90vw]"> {/* This sets a css variable that can be used to make the spread out animation responsive */}
                     <span className={clsx({ "text-primary": activeSection === "contact" })}>
                         <CharSpreaderSpan
                             text="contact"
                             spread={spread}
-                            calculateSpreadOutValues={calculateSpreadOutValues("--max-screen-x-contact", "")}
+                            calculateSpreadOutValues={calculateSpreadOutValues("--max-screen-x-contact")}
                         />
                     </span>
                 </a>
