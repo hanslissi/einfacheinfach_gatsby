@@ -5,24 +5,20 @@ import { useInView } from "framer-motion";
 import ScribbleCircleAround from "../../animated-commons/scribble-circle-around";
 
 const Hero = () => {
-    const { setSpread, toggleSpread } = useContext(NavContext);
-    const [loopingScribbleCircle, setLoopingScribbleCircle] = React.useState<boolean>(true);
+    const { spread, scrollSpreadLocked, toggleSpread, setSpread } = useContext(NavContext);
     const ref = React.useRef(null);
     const isInView = useInView(ref);
 
     useEffect(() => {
         if (!isInView) {
             setSpread(false);
-        } else {
+        } else if (!scrollSpreadLocked) {
             setSpread(true);
         }
     }, [isInView])
 
     const handleClickLogo = () => {
-        if (loopingScribbleCircle) {
-            setLoopingScribbleCircle(false);
-        }
-        toggleSpread();
+        toggleSpread(true); // lock the scroll spread when clicking logo once.
     }
 
     return (
@@ -36,7 +32,7 @@ const Hero = () => {
                 />
                 <ScribbleCircleAround
                     className="pointer-events-none absolute w-[150%] -left-1/4 -top-1/3"
-                    loop={loopingScribbleCircle}
+                    loop={spread}
                     delay={3}
                 />
             </div>

@@ -10,18 +10,21 @@ import { NavContext } from "../context/NavContext"
 
 const IndexPage: React.FC<PageProps> = () => {
   const [spread, setSpread] = React.useState<boolean>(true);
+  const [scrollSpreadLocked, setScrollSpreadLocked] = React.useState<boolean>(false);
 
-
-  const toggleSpread = () => {
+  const toggleSpread = (shouldLockScrollSpread: boolean) => {
     setSpread(!spread);
+    if (shouldLockScrollSpread) {
+      setScrollSpreadLocked(true);
+    }
   }
 
-  const setContextSpread = (value: boolean) => {
+  const setStateSpread = (value: boolean) => {
     setSpread(value);
   }
 
   return (
-    <NavContext.Provider value={{ spread: spread, setSpread: setContextSpread, toggleSpread: toggleSpread }}>
+    <NavContext.Provider value={{ spread: spread, scrollSpreadLocked: scrollSpreadLocked, setSpread: setStateSpread, toggleSpread: toggleSpread }}>
       <RootLayout>
         <main>
           <Hero />
