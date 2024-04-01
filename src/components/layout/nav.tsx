@@ -35,6 +35,13 @@ const Nav = () => {
         });
     }
 
+    const handleClickLink = (e: React.MouseEvent) => {
+        // Disabling the link behavior when the characters are spread around
+        if (spread) {
+            e.preventDefault();
+        }
+    }
+
     const calculateSpreadOutValues = (cssVariableMaxScreenX: string) => {
         // returns a function that calculates random css values for the spread out animation
         return () => {
@@ -54,7 +61,15 @@ const Nav = () => {
             }
         )}>
             <nav className="h-full flex text-primary flex-row justify-between items-center px-8 md:px-16 md:gap-8 md:justify-end">
-                <a href="#services" className="max-md:[--max-screen-x-services:80vw]"> {/* This sets a css variable that can be used to make the spread out animation responsive */}
+                <a
+                    href="#services"
+                    className={clsx("max-md:[--max-screen-x-services:80vw]", /* This sets a css variable that can be used to make the spread out animation responsive */
+                        {
+                            "cursor-default": spread
+                        }
+                    )}
+                    onClick={handleClickLink}
+                >
                     <span className={clsx({ "font-bold": activeSection === "services" })}>
                         <CharSpreaderSpan
                             text="services"
@@ -63,7 +78,15 @@ const Nav = () => {
                         />
                     </span>
                 </a>
-                <a href="#work" className="max-md:[--max-screen-x-work:-30vw]"> {/* This sets a css variable that can be used to make the spread out animation responsive */}
+                <a
+                    href="#work"
+                    className={clsx("max-md:[--max-screen-x-work:-30vw]", /* This sets a css variable that can be used to make the spread out animation responsive */
+                        {
+                            "cursor-default": spread
+                        }
+                    )}
+                    onClick={handleClickLink}
+                >
                     <span className={clsx({ "font-bold": activeSection === "work" })}>
                         <CharSpreaderSpan
                             text="work"
@@ -72,7 +95,15 @@ const Nav = () => {
                         />
                     </span>
                 </a>
-                <a href="#about" className="max-md:[--max-screen-x-about:30vw]"> {/* This sets a css variable that can be used to make the spread out animation responsive */}
+                <a
+                    href="#about"
+                    className={clsx("max-md:[--max-screen-x-about:30vw]", /* This sets a css variable that can be used to make the spread out animation responsive */
+                        {
+                            "cursor-default": spread
+                        }
+                    )}
+                    onClick={handleClickLink}
+                >
                     <span className={clsx({ "font-bold": activeSection === "about" })}>
                         <CharSpreaderSpan
                             text="about"
@@ -81,7 +112,15 @@ const Nav = () => {
                         />
                     </span>
                 </a>
-                <a href="#contact" className="max-md:[--max-screen-x-contact:-80vw]"> {/* This sets a css variable that can be used to make the spread out animation responsive */}
+                <a
+                    href="#contact"
+                    className={clsx("max-md:[--max-screen-x-contact:-80vw]", /* This sets a css variable that can be used to make the spread out animation responsive */
+                        {
+                            "cursor-default": spread
+                        }
+                    )}
+                    onClick={handleClickLink}
+                >
                     <span className={clsx({ "font-bold": activeSection === "contact" })}>
                         <CharSpreaderSpan
                             text="contact"
