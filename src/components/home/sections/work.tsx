@@ -8,6 +8,7 @@ import PhoneWorkThumbnail from "../../../assets/pictures/works/phone_work_thumbn
 import RoundyCrazySvg from "../../../assets/shapes/Roundy_Crazy.svg";
 import DonutySvg from "../../../assets/shapes/Donuty.svg";
 import WavyPattern from '../../../assets/patterns/wavy_pattern.png';
+import DiagonalLinePattern from '../../../assets/patterns/diagonal_line_pattern.png';
 import { motion, useScroll, useTransform } from "framer-motion";
 import useParallax from "../../../hooks/useParallax";
 
@@ -46,7 +47,7 @@ const Work = () => {
             />
             <motion.div
                 className="absolute left-0 top-[60%] w-[25%] h-12 md:w-[15%] md:h-32"
-                style={{ y: xParallaxSm, backgroundImage: `url(${WavyPattern})`, backgroundRepeat: 'repeat', backgroundSize: '40%' }}
+                style={{ y: xParallaxSm, backgroundImage: `url(${DiagonalLinePattern})`, backgroundRepeat: 'repeat', backgroundSize: '40%' }}
             />
             <motion.img
                 className="absolute hidden md:block -left-32 bottom-1/4 h-40"

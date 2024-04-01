@@ -7,10 +7,11 @@ interface ScribbleCircleAroundProps {
     duration?: number;
     delay?: number;
     loop?: boolean;
+    instantFirstPlay?: boolean;
 }
 
-const ScribbleCircleAround = ({ className, duration = 2, delay = 10, loop = true }: ScribbleCircleAroundProps) => {
-    const [animationState, setAnimationState] = React.useState<"off" | "on">("off");
+const ScribbleCircleAround = ({ className, duration = 2, delay = 10, loop = true, instantFirstPlay = true }: ScribbleCircleAroundProps) => {
+    const [animationState, setAnimationState] = React.useState<"off" | "on">(instantFirstPlay ? "on" : "off");
 
     useEffect(() => {
         if (loop) { // When looping is enabled, the animation will repeat after the delay time.
