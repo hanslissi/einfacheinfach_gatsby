@@ -42,8 +42,9 @@ const Hero = () => {
 
     return (
         <section className="h-lvh flex justify-center items-center -mt-20">
-            <motion.div 
+            <motion.button 
                 className="relative bg-beige"
+                onClick={handleClickLogo}
                 variants={logoVariants}
                 animate="idle"
                 whileTap="idle"
@@ -51,16 +52,15 @@ const Hero = () => {
             >
                 <img
                     ref={ref}
-                    className="cursor-pointer h-12 md:h-20"
+                    className="h-12 md:h-20"
                     src={Logo}
-                    onClick={handleClickLogo}
                 />
                 <ScribbleCircleAround
                     className="pointer-events-none absolute w-[150%] -left-1/4 -top-1/3"
                     loop={spread}
                     delay={2}
                 />
-            </motion.div>
+            </motion.button>
 
         </section>
     )
