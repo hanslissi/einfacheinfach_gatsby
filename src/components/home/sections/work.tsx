@@ -20,9 +20,9 @@ const Work = () => {
         target: refWorkCardsDiv,
         offset: ["-90vh", "end 80vh"]
     });
-    const xParallaxXl = useParallax(scrollYProgressSection, 700);
-    const xParallaxMd = useParallax(scrollYProgressSection, 400);
-    const xParallaxSm = useParallax(scrollYProgressSection, 200);
+    const yParallaxXl = useParallax(scrollYProgressSection, 700);
+    const yParallaxMd = useParallax(scrollYProgressSection, 400);
+    const yParallaxSm = useParallax(scrollYProgressSection, 200);
     const pathLength = useTransform(scrollYProgressWorkCardsDiv, [0, 1], [1, 0]);
 
     return (
@@ -33,31 +33,31 @@ const Work = () => {
             {/* background parallax shapes begin */}
             <motion.div
                 className="absolute -right-10 top-[15%] w-[15%] h-32"
-                style={{ y: xParallaxMd, backgroundImage: `url(${WavyPattern})`, backgroundRepeat: 'repeat', backgroundSize: '40%' }}
+                style={{ y: yParallaxMd, backgroundImage: `url(${WavyPattern})`, backgroundRepeat: 'repeat', backgroundSize: '40%' }}
             />
             <motion.img
                 className="absolute -left-10 top-1/3 md:left-8 z-10"
                 src={RoundyCrazySvg}
-                style={{ y: xParallaxMd, rotate: xParallaxSm }}
+                style={{ y: yParallaxMd, rotate: yParallaxSm }}
             />
             <motion.img
                 className="absolute hidden md:block -right-40 top-[40%] z-10"
                 src={DonutySvg}
-                style={{ y: xParallaxXl }}
+                style={{ y: yParallaxXl }}
             />
             <motion.div
                 className="absolute left-0 top-[60%] w-[25%] h-12 md:w-[15%] md:h-32"
-                style={{ y: xParallaxSm, backgroundImage: `url(${DiagonalLinePattern})`, backgroundRepeat: 'repeat', backgroundSize: '40%' }}
+                style={{ y: yParallaxSm, backgroundImage: `url(${DiagonalLinePattern})`, backgroundRepeat: 'repeat', backgroundSize: '40%' }}
             />
             <motion.img
                 className="absolute hidden md:block -left-32 bottom-1/4 h-40"
                 src={DonutySvg}
-                style={{ y: xParallaxXl }}
+                style={{ y: yParallaxXl }}
             />
             <motion.img
                 className="absolute -right-6 bottom-[10%] md:right-10"
                 src={RoundyCrazySvg}
-                style={{ y: xParallaxMd, rotate: xParallaxMd }}
+                style={{ y: yParallaxMd, rotate: yParallaxMd }}
             />
             {/* background parallax shapes end */}
 
