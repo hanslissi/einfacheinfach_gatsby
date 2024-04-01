@@ -7,7 +7,18 @@ import StarySvg from "../../../assets/shapes/Stary.svg";
 import DonutySvg from "../../../assets/shapes/Donuty.svg";
 import WavingHandImg from "../../../assets/waving_hand.png";
 import RoundyCrazySvg from "../../../assets/shapes/Roundy_Crazy.svg";
-import JonnyCharacterImg from "../../../assets/pictures/characters/jonny.png";
+import JonnyCharacterImg from "../../../assets/pictures/characters/jonny.svg";
+import BettiCharacterImg from "../../../assets/pictures/characters/betti.svg";
+import BeyzaCharacterImg from "../../../assets/pictures/characters/beyza.svg";
+import NiciCharacterImg from "../../../assets/pictures/characters/nici.svg";
+import RaffaCharacterImg from "../../../assets/pictures/characters/raffa.svg";
+import HannahCharacterImg from "../../../assets/pictures/characters/hannah.svg";
+import JonnyPortraitImg from '../../../assets/pictures/team/jonny.jpg';
+import BettiPortraitImg from '../../../assets/pictures/team/betti.jpg';
+import BeyzaPortraitImg from '../../../assets/pictures/team/beyza.jpg';
+import NiciPortraitImg from '../../../assets/pictures/team/nici.jpg';
+import RaffaPortraitImg from '../../../assets/pictures/team/raffa.jpg';
+import HannahPortraitImg from '../../../assets/pictures/team/hannah.jpg';
 
 const Team = () => {
     const refSection = useRef(null);
@@ -81,30 +92,36 @@ const Team = () => {
 
                     </span>
                 </h1>
-                <div className="w-full grid grid-cols-3 gap-4 md:grid-cols-6 lg:px-20">
+                <div className="w-full grid grid-cols-3 h-[500px] gap-4 md:grid-cols-6 lg:px-20">
                     <CharacterCard
                         name="Jonny"
                         characterImg={JonnyCharacterImg}
+                        portraitImg={JonnyPortraitImg}
                     />
                     <CharacterCard
                         name="Betti"
-                        characterImg={JonnyCharacterImg}
+                        characterImg={BettiCharacterImg}
+                        portraitImg={BettiPortraitImg}
                     />
                     <CharacterCard
-                        name="Rafa"
-                        characterImg={JonnyCharacterImg}
+                        name="Raffa"
+                        characterImg={RaffaCharacterImg}
+                        portraitImg={RaffaPortraitImg}
                     />
                     <CharacterCard
                         name="Hannah"
-                        characterImg={JonnyCharacterImg}
+                        characterImg={HannahCharacterImg}
+                        portraitImg={HannahPortraitImg}
                     />
                     <CharacterCard
                         name="Nici"
-                        characterImg={JonnyCharacterImg}
+                        characterImg={NiciCharacterImg}
+                        portraitImg={NiciPortraitImg}
                     />
                     <CharacterCard
                         name="Beyza"
-                        characterImg={JonnyCharacterImg}
+                        characterImg={BeyzaCharacterImg}
+                        portraitImg={BeyzaPortraitImg}
                     />
                 </div>
                 <button
