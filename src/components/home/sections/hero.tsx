@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import Logo from '../../../assets/einfacheinfach_logo_blue.svg';
 import { NavContext } from "../../../context/NavContext";
-import { useInView } from "framer-motion";
+import { Variants, motion, useInView } from "framer-motion";
 import ScribbleCircleAround from "../../animated-commons/scribble-circle-around";
 
 const Hero = () => {
@@ -21,9 +21,34 @@ const Hero = () => {
         toggleSpread(true); // lock the scroll spread when clicking logo once.
     }
 
+    const logoVariants: Variants = {
+        idle: {
+            scale: 1,
+            transition: {
+                type: "spring",
+                bounce: 0.6,
+                duration: 0.5
+            }
+        },
+        hover: {
+            scale: 1.1,
+            transition: {
+                type: "spring",
+                bounce: 0.6,
+                duration: 0.5
+            }
+        }
+    }
+
     return (
         <section className="h-lvh flex justify-center items-center -mt-20">
-            <div className="relative bg-beige">
+            <motion.div 
+                className="relative bg-beige"
+                variants={logoVariants}
+                animate="idle"
+                whileTap="idle"
+                whileHover="hover"
+            >
                 <img
                     ref={ref}
                     className="cursor-pointer h-12 md:h-20"
@@ -35,7 +60,7 @@ const Hero = () => {
                     loop={spread}
                     delay={2}
                 />
-            </div>
+            </motion.div>
 
         </section>
     )
