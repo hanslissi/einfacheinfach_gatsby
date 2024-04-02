@@ -71,19 +71,19 @@ const Team = () => {
             />
             {/* parallax shapes end */}
 
-            <div className="flex flex-col gap-20 mt-20 items-center">
+            <div className="flex flex-col gap-10 lg:gap-20 mt-20 items-center">
                 <h1>Unser {" "}
                     <span className="relative z-10">
                         Team
 
                         {/* shapes begin */}
                         <motion.img
-                            className="absolute -right-9 top-1/3"
+                            className="absolute -right-[0.6em] top-1/3 h-[1.2em]"
                             src={StarySvg}
                             style={{ rotate: yParallaxXl }}
                         />
                         <motion.img
-                            className="absolute h-10 -left-6 top-0 -z-10"
+                            className="absolute -left-[0.3em] top-0 h-[0.6em] -z-10"
                             src={StarySvg}
                             style={{ rotate: yParallaxMd }}
                         />
