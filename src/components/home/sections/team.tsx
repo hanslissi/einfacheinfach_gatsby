@@ -95,31 +95,37 @@ const Team = () => {
                 <div className="w-full grid grid-cols-3 h-[500px] gap-4 md:grid-cols-6 lg:px-20">
                     <CharacterCard
                         name="Jonny"
+                        role="Web Developer"
                         characterImg={JonnyCharacterImg}
                         portraitImg={JonnyPortraitImg}
                     />
                     <CharacterCard
                         name="Betti"
+                        role="Animator"
                         characterImg={BettiCharacterImg}
                         portraitImg={BettiPortraitImg}
                     />
                     <CharacterCard
                         name="Raffa"
+                        role="UI Designer"
                         characterImg={RaffaCharacterImg}
                         portraitImg={RaffaPortraitImg}
                     />
                     <CharacterCard
                         name="Hannah"
+                        role="Animator"
                         characterImg={HannahCharacterImg}
                         portraitImg={HannahPortraitImg}
                     />
                     <CharacterCard
                         name="Nici"
+                        role="Media Expert"
                         characterImg={NiciCharacterImg}
                         portraitImg={NiciPortraitImg}
                     />
                     <CharacterCard
                         name="Beyza"
+                        role="Creative Director"
                         characterImg={BeyzaCharacterImg}
                         portraitImg={BeyzaPortraitImg}
                     />
