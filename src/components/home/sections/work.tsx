@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import SectionWrapper from "../../wrappers/section-wrapper";
 import WorkInformationCard from "../work-information-card";
-import LongCurvyArrrowLineSvg from "../../svg/long-curvy-arrow-line";
+import LongCurvyArrrowLineSvg from "../../animated-commons/long-curvy-arrow-line";
 import MeldeamtWorkThumbnail from "../../../assets/pictures/works/meldeamt_work_thumbnail.png";
 import TimWorkThumbnail from "../../../assets/pictures/works/tim_work_thumbnail.png";
 import PhoneWorkThumbnail from "../../../assets/pictures/works/phone_work_thumbnail.png";

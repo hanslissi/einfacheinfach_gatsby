@@ -50,7 +50,7 @@ const cardBackVariants: Variants = {
     }
 }
 
-const characterImgVariant: Variants = {
+const characterImgVariants: Variants = {
     idle: {
         scale: 1.1,
         transition: {
@@ -68,7 +68,7 @@ const characterImgVariant: Variants = {
     }
 }
 
-const fontVariant: Variants = {
+const fontVariants: Variants = {
     idle: {
         opacity: 0,
         x: -10,
@@ -87,7 +87,7 @@ const fontVariant: Variants = {
     }
 }
 
-const lineVariant: Variants = {
+const lineVariants: Variants = {
     idle: {
         width: "0%",
         transition: {
@@ -151,7 +151,7 @@ const CharacterCard = ({ name, role, characterImg, portraitImg }: CharacterCardP
                             className="mx-auto h-full"
                             src={characterImg}
                             alt={name}
-                            variants={characterImgVariant}
+                            variants={characterImgVariants}
                             animate={tapped ? "tapped" : "idle"}
                             initial="idle"
                         />
@@ -175,14 +175,14 @@ const CharacterCard = ({ name, role, characterImg, portraitImg }: CharacterCardP
                     animate={tapped ? "tapped" : "idle"}
                 >
                     <div className="flex flex-row gap-2 items-center xl:gap-4">
-                        <motion.h2 className="font-bold text-base sm:text-2xl xl:text-4xl" variants={fontVariant}>
+                        <motion.h2 className="font-bold text-base sm:text-2xl xl:text-4xl" variants={fontVariants}>
                             {name}
                         </motion.h2>
-                        <motion.hr className="border-[0.5px] w-full" variants={lineVariant}></motion.hr>
+                        <motion.hr className="border-[0.5px] w-full" variants={lineVariants}></motion.hr>
                     </div>
                     <div className="flex flex-row gap-2 items-center xl:gap-4">
-                        <motion.hr className="border-[0.5px] w-full" variants={lineVariant}></motion.hr>
-                        <motion.div className="whitespace-nowrap text-[0.6rem] sm:text-xs xl:text-base" variants={fontVariant}>{role}</motion.div>
+                        <motion.hr className="border-[0.5px] w-full" variants={lineVariants}></motion.hr>
+                        <motion.div className="whitespace-nowrap text-[0.6rem] sm:text-xs xl:text-base" variants={fontVariants}>{role}</motion.div>
                     </div>
                 </motion.div>
             </motion.div>

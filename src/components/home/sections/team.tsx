@@ -131,7 +131,7 @@ const Team = () => {
                     />
                 </div>
                 <button
-                    className="text-2xl"
+                    className="text-xl md:text-2xl"
                     onMouseEnter={handleHoverStartWaveButton}
                     onMouseLeave={handleHoverEndWaveButton}
                 >

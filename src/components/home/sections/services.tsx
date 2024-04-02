@@ -1,10 +1,10 @@
+import { motion, useScroll } from "framer-motion";
 import React, { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
-import SectionWrapper from "../../wrappers/section-wrapper";
-import IconInformationCard from "../icon-information-card";
+import ExclamationMarkIcon from "../../../assets/exclamation_mark_icon.svg";
 import QuestionMarkIcon from "../../../assets/question_mark_icon.svg";
 import VideoIcon from "../../../assets/video_icon.svg";
-import ExclamationMarkIcon from "../../../assets/exclamation_mark_icon.svg";
+import SectionWrapper from "../../wrappers/section-wrapper";
+import IconInformationCard from "../icon-information-card";
 
 const Services = () => {
     const ref = useRef(null);
@@ -32,7 +32,7 @@ const Services = () => {
                         </div>
                     </span>
                 </h1>
-                <div className="w-full grid grid-cols-2 gap-6 md:grid-cols-3 md:gap-12 md:grid-cols-3">
+                <div className="w-full grid grid-cols-2 gap-6 md:grid-cols-3 md:gap-12">
                     <IconInformationCard
                         title="Frage"
                         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut?"

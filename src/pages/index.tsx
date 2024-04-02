@@ -6,6 +6,7 @@ import Services from "../components/home/sections/services"
 import Team from "../components/home/sections/team"
 import Work from "../components/home/sections/work"
 import { NavContext } from "../context/NavContext"
+import HireCTA from "../components/home/sections/hire-cta"
 
 
 const IndexPage: React.FC<PageProps> = () => {
@@ -31,6 +32,7 @@ const IndexPage: React.FC<PageProps> = () => {
           <Services />
           <Work />
           <Team />
+          <HireCTA/>
         </main>
       </RootLayout>
     </NavContext.Provider>

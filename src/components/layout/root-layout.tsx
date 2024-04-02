@@ -13,7 +13,6 @@ const RootLayout = ({ children }: RootLayoutProps) => {
       <div className="overflow-hidden">
         {children}
       </div>
-      <div className="h-10"></div>
       <Footer />
     </div>
   )
