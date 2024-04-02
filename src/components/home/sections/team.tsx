@@ -92,7 +92,7 @@ const Team = () => {
 
                     </span>
                 </h1>
-                <div className="w-full grid grid-cols-3 h-[500px] gap-4 md:grid-cols-6 lg:px-20">
+                <div className="w-full grid grid-cols-3 gap-10 lg:grid-cols-6 md:gap-20 lg:gap-4 lg:px-20">
                     <CharacterCard
                         name="Jonny"
                         role="Web Developer"

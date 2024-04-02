@@ -131,7 +131,7 @@ const CharacterCard = ({ name, role, characterImg, portraitImg }: CharacterCardP
     }
 
     return (
-        <div className="relative cursor-pointer w-full h-full">
+        <div className="relative cursor-pointer w-full aspect-[2/5]">
             <motion.div
                 className="absolute w-full h-full bg-beige border"
                 variants={cardFrontVariants}
@@ -169,20 +169,20 @@ const CharacterCard = ({ name, role, characterImg, portraitImg }: CharacterCardP
                 initial="idle"
             >
                 <motion.div
-                    className="w-full h-full p-4 flex flex-col"
+                    className="w-full h-full p-2 xl:p-4 flex flex-col"
                     variants={staggerAnimation}
                     initial="idle"
                     animate={tapped ? "tapped" : "idle"}
                 >
-                    <div className="flex flex-row gap-2 items-center lg:gap-4">
-                        <motion.h2 className="font-bold" variants={fontVariant}>
+                    <div className="flex flex-row gap-2 items-center xl:gap-4">
+                        <motion.h2 className="font-bold text-base sm:text-2xl xl:text-4xl" variants={fontVariant}>
                             {name}
                         </motion.h2>
                         <motion.hr className="border-[0.5px] w-full" variants={lineVariant}></motion.hr>
                     </div>
-                    <div className="flex flex-row gap-2 items-center lg:gap-4">
+                    <div className="flex flex-row gap-2 items-center xl:gap-4">
                         <motion.hr className="border-[0.5px] w-full" variants={lineVariant}></motion.hr>
-                        <motion.div className="whitespace-nowrap" variants={fontVariant}>{role}</motion.div>
+                        <motion.div className="whitespace-nowrap text-[0.6rem] sm:text-xs xl:text-base" variants={fontVariant}>{role}</motion.div>
                     </div>
                 </motion.div>
             </motion.div>
