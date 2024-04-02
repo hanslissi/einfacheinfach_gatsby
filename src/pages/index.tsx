@@ -1,13 +1,12 @@
-import * as React from "react"
 import type { HeadFC, PageProps } from "gatsby"
-import RootLayout from "../components/layout/root-layout"
+import * as React from "react"
 import Hero from "../components/home/sections/hero"
+import HireCTA from "../components/home/sections/hire-cta"
 import Services from "../components/home/sections/services"
 import Team from "../components/home/sections/team"
 import Work from "../components/home/sections/work"
+import RootLayout from "../components/layout/root-layout"
 import { NavContext } from "../context/NavContext"
-import HireCTA from "../components/home/sections/hire-cta"
-
 
 const IndexPage: React.FC<PageProps> = () => {
   const [spread, setSpread] = React.useState<boolean>(true);
