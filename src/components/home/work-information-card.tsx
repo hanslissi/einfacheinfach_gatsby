@@ -1,6 +1,7 @@
 import clsx from "clsx";
 import { Variants, motion, useAnimation, useInView } from "framer-motion";
 import React, { useEffect, useRef } from "react";
+import { DURATION_FAST } from "../../constants/animation-constants";
 
 interface IconInformationCardProps {
     title: string;
@@ -25,7 +26,7 @@ const IconInformationCard = ({ title, description, thumbnail, className }: IconI
             y: 0,
             transition: {
                 type: "easeOut",
-                duration: 0.3,
+                duration: DURATION_FAST,
             }
         },
     };

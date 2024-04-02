@@ -3,6 +3,7 @@ import Logo from '../../../assets/einfacheinfach_logo_blue.svg';
 import { NavContext } from "../../../context/NavContext";
 import { Variants, motion, useInView } from "framer-motion";
 import ScribbleCircleAround from "../../animated-commons/scribble-circle-around";
+import { DURATION_MEDIUM } from "../../../constants/animation-constants";
 
 const Hero = () => {
     const { spread, scrollSpreadLocked, toggleSpread, setSpread } = useContext(NavContext);
@@ -27,7 +28,7 @@ const Hero = () => {
             transition: {
                 type: "spring",
                 bounce: 0.6,
-                duration: 0.5
+                duration: DURATION_MEDIUM
             }
         },
         hover: {
@@ -35,7 +36,7 @@ const Hero = () => {
             transition: {
                 type: "spring",
                 bounce: 0.6,
-                duration: 0.5
+                duration: DURATION_MEDIUM
             }
         }
     }

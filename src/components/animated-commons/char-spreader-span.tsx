@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { Variants, motion, useAnimation } from 'framer-motion';
+import { DURATION_FAST, DURATION_MEDIUM } from '../../constants/animation-constants';
 
 interface CharSpreaderSpanProps {
     text: string;
@@ -20,7 +21,7 @@ const CharSpreaderSpan = ({ text, spread, calculateSpreadOutValues }: CharSpread
                 ...calculateSpreadOutValues(),
                 transition: {
                     type: "spring",
-                    duration: 0.5,
+                    duration: DURATION_MEDIUM,
                 }
             },
             gather: {
@@ -29,7 +30,7 @@ const CharSpreaderSpan = ({ text, spread, calculateSpreadOutValues }: CharSpread
                 rotate: 0,
                 transition: {
                     type: "easeInOut",
-                    duration: 0.3,
+                    duration: DURATION_FAST,
                 }
             }
         }

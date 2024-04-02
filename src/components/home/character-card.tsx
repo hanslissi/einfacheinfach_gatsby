@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import CrossPattern from '../../assets/patterns/cross_pattern.png';
 import DiagonalLinePattern from '../../assets/patterns/diagonal_line_pattern.png';
 import GridPattern from '../../assets/patterns/grid_pattern.png';
@@ -120,6 +120,7 @@ const staggerAnimation: Variants = {
 
 const CharacterCard = ({ name, role, characterImg, portraitImg }: CharacterCardProps) => {
     const [tapped, setTapped] = React.useState(false);
+    const randomPattern = useMemo(() => getRandomElement(patterns), []);
 
     const handleClickCardFront = () => {
         setTapped(true);
@@ -141,7 +142,7 @@ const CharacterCard = ({ name, role, characterImg, portraitImg }: CharacterCardP
                 <div className="relative w-full h-full">
                     <div
                         className="absolute left-0 top-0 w-full h-[30%] opacity-20"
-                        style={{ backgroundImage: `url(${getRandomElement(patterns)})`, backgroundRepeat: 'repeat', backgroundSize: '40%' }}
+                        style={{ backgroundImage: `url(${randomPattern})`, backgroundRepeat: 'repeat', backgroundSize: '40%' }}
                     >
                         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-beige"></div>
                     </div>
