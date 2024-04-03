@@ -3,6 +3,7 @@ import SectionWrapper from '../../wrappers/section-wrapper';
 import { Variants, motion, useAnimation, useInView } from 'framer-motion';
 import { DURATION_FAST, DURATION_SLOW } from '../../../constants/animation-constants';
 import InfinityLoopArrow from '../../animated-commons/infinity-loop-arrow';
+import { Link } from 'gatsby';
 
 const scribbleUnderlineVariants: Variants = {
     hidden: {
@@ -45,18 +46,19 @@ const HireCTA = () => {
                         </motion.svg>
                     </div>
                 </h3>
-                <div className="relative">
+                <div className="relative p-16">
                     <InfinityLoopArrow
-                        className="absolute w-full transform scale-150 origin-center"
+                        className="absolute w-full inset-0 transform scale-150 origin-center"
                         duration={4}
                     />
-                    <button
+                    <Link
+                        to="/hire-us"
                         className="relative bg-primary text-white px-20 py-10 rounded-3xl text-4xl"
                         onMouseEnter={() => {setHoverButton(true); console.log('hover')}}
                         onMouseLeave={() => setHoverButton(false)}
                     >
                         Hire our services!
-                    </button>
+                    </Link>
 
                 </div>
             </div>

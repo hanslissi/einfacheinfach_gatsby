@@ -16,11 +16,13 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.3.3",
     "clsx": "^2.1.0",
     "framer-motion": "^11.0.21",
     "gatsby": "^5.13.3",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.51.2"
   },
   "devDependencies": {
     "@types/node": "^20.11.19",
