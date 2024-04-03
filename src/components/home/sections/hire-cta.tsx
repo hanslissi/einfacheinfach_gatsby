@@ -23,7 +23,6 @@ const scribbleUnderlineVariants: Variants = {
 }
 
 const HireCTA = () => {
-    const [hoverButton, setHoverButton] = useState(false);
     const ref = useRef(null);
     const inView = useInView(ref);
 
@@ -54,8 +53,6 @@ const HireCTA = () => {
                     <Link
                         to="/hire-us"
                         className="relative bg-primary text-white px-20 py-10 rounded-3xl text-4xl"
-                        onMouseEnter={() => {setHoverButton(true); console.log('hover')}}
-                        onMouseLeave={() => setHoverButton(false)}
                     >
                         Hire our services!
                     </Link>
