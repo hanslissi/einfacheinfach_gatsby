@@ -47,12 +47,12 @@ const HireCTA = () => {
                 </h3>
                 <div className="relative p-16">
                     <InfinityLoopArrow
-                        className="absolute w-full inset-0 transform scale-150 origin-center"
+                        className="absolute w-full inset-0 transform scale-105 origin-center md:scale-150"
                         duration={4}
                     />
                     <Link
                         to="/hire-us"
-                        className="relative bg-primary text-white px-20 py-10 rounded-3xl text-4xl"
+                        className="relative whitespace-nowrap max-w-full bg-primary text-white px-20 py-10 rounded-3xl text-2xl md:text-4xl"
                     >
                         Hire our services!
                     </Link>

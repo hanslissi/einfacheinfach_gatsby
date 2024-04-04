@@ -171,7 +171,7 @@ const ContactForm = ({ className }: ContactFormProps) => {
                                 />
                             }
                             <motion.button
-                                className="relative w-full h-full bg-primary text-white rounded-3xl text-4xl"
+                                className="relative w-full h-full bg-primary text-white rounded-3xl text-2xl md:text-4xl"
                                 disabled={loading}
                                 onClick={handleClickButton}
                                 variants={submitButtonVariants}
