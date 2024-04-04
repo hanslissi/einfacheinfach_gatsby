@@ -78,9 +78,9 @@ const HireUs = () => {
                             src={Logo}
                         />
                     </Link>
-                    <h1 ref={refHeadline} className="relative font-bold text-primary mt-20">Hire {" "}
+                    <h1 ref={refHeadline} className="relative font-bold text-primary mt-20">Schicke {" "}
                         <span className="relative inline-block">
-                            our services!
+                            eine Anfrage!
                             <div className="absolute -bottom-[100%] left-0">
                                 <motion.svg className="max-w-[100%]" width="545" height="57" viewBox="0 0 545 57" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <motion.path
@@ -102,9 +102,9 @@ const HireUs = () => {
                     </h1>
                     <ContactForm className="md:mt-20"/>
                     <p ref={refParagraph}>
-                        We will reply {" "}
+                        Wir antworten {" "}
                         <span className="relative inline-block">
-                            as soon as possible
+                            so schnell wie möglich
                             <div className="absolute -bottom-[150%] md:-bottom-full left-0">
                                 <motion.svg className="max-w-[100%]" width="286.27" height="45.66" viewBox="0 0 286.27 45.66" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <motion.path

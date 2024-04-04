@@ -61,8 +61,8 @@ const Work = () => {
             />
             {/* background parallax shapes end */}
 
-            <h1 className="text-primary font-bold">Work</h1>
-            <p className="mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <h1 className="text-primary font-bold">Projekte</h1>
+            <p className="mt-4">Einige Projekte von zufriedenen Kunden und Zuschauern.</p>
             <div className="relative w-full mt-5 flex flex-col justify-center gap-10 py-10 md:py-24 md:gap-20 md:px-24 md:mt-24 lg:px-60" ref={refWorkCardsDiv}>
                 <LongCurvyArrrowLineSvg pathLength={pathLength} className="absolute inset-0 z-0 h-full w-full" />
                 <WorkInformationCard

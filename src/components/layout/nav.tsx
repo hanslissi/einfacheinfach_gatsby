@@ -89,7 +89,7 @@ const Nav = () => {
                 >
                     <span className={clsx({ "font-bold": activeSection === "work" })}>
                         <CharSpreaderSpan
-                            text="work"
+                            text="projekte"
                             spread={spread}
                             calculateSpreadOutValues={calculateSpreadOutValues("--max-screen-x-work")}
                         />
@@ -106,7 +106,7 @@ const Nav = () => {
                 >
                     <span className={clsx({ "font-bold": activeSection === "about" })}>
                         <CharSpreaderSpan
-                            text="about"
+                            text="team"
                             spread={spread}
                             calculateSpreadOutValues={calculateSpreadOutValues("--max-screen-x-about")}
                         />
@@ -123,7 +123,7 @@ const Nav = () => {
                 >
                     <span className={clsx({ "font-bold": activeSection === "contact" })}>
                         <CharSpreaderSpan
-                            text="contact"
+                            text="kontakt"
                             spread={spread}
                             calculateSpreadOutValues={calculateSpreadOutValues("--max-screen-x-contact")}
                         />

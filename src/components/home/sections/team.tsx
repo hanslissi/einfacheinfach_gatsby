@@ -135,7 +135,7 @@ const Team = () => {
                     onMouseEnter={handleHoverStartWaveButton}
                     onMouseLeave={handleHoverEndWaveButton}
                 >
-                    Wave to the team
+                    Winke dem team zu!
                     <motion.img
                         src={WavingHandImg}
                         className="h-14 inline-block"

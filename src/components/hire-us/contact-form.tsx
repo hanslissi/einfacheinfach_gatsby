@@ -27,7 +27,7 @@ interface ContactFormData {
 const inputValidation = {
     required: {
         value: true,
-        message: "required"
+        message: "Pflichtfeld"
     }
 }
 
@@ -117,9 +117,9 @@ const ContactForm = ({ className }: ContactFormProps) => {
     const getInfoMessage = () => {
         switch (emailStatus) {
             case 'success':
-                return 'Message sent successfully';
+                return 'Anfrage erfolgreich gesendet';
             case 'error':
-                return 'An error occurred while sending the message please try again later';
+                return 'Ein Fehler ist aufgetreten, bitte versuchen Sie es erneut';
             default:
                 return '';
         }
@@ -137,28 +137,28 @@ const ContactForm = ({ className }: ContactFormProps) => {
                             name="fromCompany"
                             id="fromCompany"
                             type="text"
-                            placeholder="company name"
+                            placeholder="Firmenname"
                             validation={inputValidation}
                         />
                         <Input
                             name="workField"
                             id="workField"
                             type="text"
-                            placeholder="field of work"
+                            placeholder="Branche"
                             validation={inputValidation}
                         />
                         <Input
                             name="contactEmail"
                             id="contactEmail"
                             type="text"
-                            placeholder="contact email"
+                            placeholder="Kontakt (E-Mail, Telefonnummer, ...)"
                             validation={inputValidation}
                         />
                         <TextArea
                             name="message"
                             id="message"
                             type="text"
-                            placeholder="describe to us how we can help your company"
+                            placeholder="Erzählen Sie uns wie wir Ihnen helfen können"
                             validation={inputValidation}
                         />
                         <div className="relative w-full h-32 px-10 py-4 md:p-0 my-10">
@@ -178,7 +178,7 @@ const ContactForm = ({ className }: ContactFormProps) => {
                                 animate="idle"
                                 whileTap="tapped"
                             >
-                                Send Request
+                                Anfrage Senden
                             </motion.button>
                             <div className="flex flex-col items-center mt-4 min-h-8">
                                 <AnimatePresence initial={false} mode="wait">
@@ -192,14 +192,14 @@ const ContactForm = ({ className }: ContactFormProps) => {
                             </div>
                             <Modal open={showRecaptcha} onClose={() => setShowRecaptcha(false)} >
                                 <div className="flex flex-col items-center gap-4">
-                                    Please solve the reCAPTCHA to send your request
+                                    Bitte das reCAPTCHA lösen um Ihre Anfrage zu senden
                                     <ReCAPTCHA
                                         className="inline-block"
                                         sitekey={process.env.RECAPTCHA_SITE_KEY || ''}
                                         onChange={handleRecaptchaChange}
                                     />
                                     <button className="underline" onClick={() => setShowRecaptcha(false)}>
-                                        Cancel message request
+                                        Anfrage abbrechen
                                     </button>
                                 </div>
                             </Modal>

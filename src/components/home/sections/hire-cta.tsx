@@ -27,10 +27,10 @@ const HireCTA = () => {
     const inView = useInView(ref);
 
     return (
-        <SectionWrapper id="hire" className="pb-32">
+        <SectionWrapper id="hire" className="pb-20 md:pb-32">
             <div className="flex flex-col items-center justify-center gap-10">
                 <h3 ref={ref} className="relative text-center">
-                    Interested?
+                    Interessiert?
                     <div className="absolute -bottom-[100%] left-0">
                         <motion.svg className="max-w-[100%]" width="286.27" height="45.66" viewBox="0 0 286.27 45.66" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <motion.path
@@ -54,7 +54,7 @@ const HireCTA = () => {
                         to="/hire-us"
                         className="relative whitespace-nowrap max-w-full bg-primary text-white px-20 py-10 rounded-3xl text-2xl md:text-4xl"
                     >
-                        Hire our services!
+                        Anfrage schicken!
                     </Link>
 
                 </div>

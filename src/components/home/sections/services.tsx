@@ -42,7 +42,7 @@ const Services = () => {
                     <IconInformationCard
                         className="relative z-40"
                         title="Frage"
-                        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut?"
+                        description="Ist Ihre Zielgruppe verwirrt? Hat sie Fragen über Ihre Services? Suchen sie nach klaren und schnellen Antworten?"
                         icon={QuestionMarkIcon}
                     >
                         <DirectionArrowDownLeft
@@ -54,7 +54,7 @@ const Services = () => {
                         <IconInformationCard
                             className="relative z-20"
                             title="Video"
-                            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut?"
+                            description="Unsere Videos machen komplexe Themen einfach! In kürzester Zeit und auf unterhaltsame Weise erklärt."
                             icon={VideoIcon}
                         >
                             <DirectionArrowDownRight
@@ -66,7 +66,7 @@ const Services = () => {
                     <div ref={refThirdCard}>
                         <IconInformationCard
                             title="Antwort"
-                            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut?"
+                            description="Nach dem Anschauen unserer Videos verstehen deine Kunden alles – klar, einfach und ohne Missverständnisse!"
                             icon={ExclamationMarkIcon}
                         />
                     </div>
