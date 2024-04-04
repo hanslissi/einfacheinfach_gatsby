@@ -11,8 +11,6 @@ interface WorkInformationCardProps {
 }
 
 const WorkInformationCard = ({ title, description, thumbnail, className }: WorkInformationCardProps) => {
-    // component that fades in when coming into view 
-
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true });
 

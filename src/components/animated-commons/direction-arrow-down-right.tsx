@@ -1,9 +1,9 @@
 import clsx from "clsx";
-import { Variants, motion, useAnimation } from "framer-motion";
+import { Variants, motion } from "framer-motion";
 import React from "react";
-import { DURATION_FAST, DURATION_SLOW } from "../../constants/animation-constants";
+import { DURATION_MEDIUM, DURATION_SLOW } from "../../constants/animation-constants";
 
-interface DirectionArrowDownProps {
+interface DirectionArrowDownRightProps {
     className?: string;
     show: boolean;
 }
@@ -13,7 +13,7 @@ const lineVariants: Variants = {
         pathLength: 0,
         transition: {
             ease: "easeInOut",
-            duration: DURATION_FAST
+            duration: DURATION_MEDIUM
         }
     },
     visible: {
@@ -25,24 +25,7 @@ const lineVariants: Variants = {
     }
 }
 
-const arrowVariants: Variants = {
-    hidden: {
-        pathLength: 0,
-        transition: {
-            ease: "easeInOut",
-            duration: DURATION_FAST
-        }
-    },
-    visible: {
-        pathLength: 1,
-        transition: {
-            ease: "easeInOut",
-            duration: DURATION_SLOW
-        }
-    }
-}
-
-const DirectionArrowDown = ({ className, show = true }: DirectionArrowDownProps) => {
+const DirectionArrowDownRight = ({ className, show = true }: DirectionArrowDownRightProps) => {
     return (
         <motion.svg
             fill="none"
@@ -56,7 +39,7 @@ const DirectionArrowDown = ({ className, show = true }: DirectionArrowDownProps)
                 stroke-width="3"
                 stroke-linecap="round"
                 strokeDasharray={"4 8"}
-                d="M192.92,4.01C40.14-16.38,2.07,56.82,.56,101.21s23.88,87.25,60.26,112.73"
+                d="M132.16,213.94c36.39-25.47,61.77-68.33,60.27-112.73C190.93,56.81,152.85-16.38,.07,4.01"
             />
             <motion.path
                 stroke="#FFFCEF"
@@ -65,20 +48,20 @@ const DirectionArrowDown = ({ className, show = true }: DirectionArrowDownProps)
                 initial={"visible"}
                 variants={lineVariants}
                 animate={show ? "hidden" : "visible"}
-                d="M60.83,213.94C24.44,188.47-.94,145.61,.56,101.21S40.14-16.38,192.92,4.01"
+                d="M132.16,213.94c36.39-25.47,61.77-68.33,60.27-112.73C190.93,56.81,152.85-16.38,.07,4.01"
             />
             <motion.path
                 stroke="#150FF4"
                 stroke-width="3"
                 stroke-linecap="round"
                 initial={"hidden"}
-                variants={arrowVariants}
+                variants={lineVariants}
                 className={!show ? "hidden" : ""}
                 animate={show ? "visible" : "hidden"}
-                d="M55.86,216.88c2.71,.02,5.42-.25,8.06-.81,.11-2.45,0-4.91-.31-7.34"
+                d="M129.38,208.73c-.31,2.43-.42,4.89-.31,7.34,2.64,.56,5.35,.83,8.06,.81"
             />
         </motion.svg>
     );
 }
 
-export default DirectionArrowDown;
+export default DirectionArrowDownRight;

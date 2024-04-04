@@ -12,7 +12,7 @@ import RootLayout from "../components/layout/root-layout";
 import SectionWrapper from "../components/wrappers/section-wrapper";
 import { DURATION_FAST, DURATION_SLOW } from "../constants/animation-constants";
 import useParallax from "../hooks/useParallax";
-import DirectionArrowDown from "../components/animated-commons/direction-arrow-down";
+import DirectionArrowDownLeft from "../components/animated-commons/direction-arrow-down-left";
 
 const scribbleUnderlineVariants: Variants = {
     hidden: {
@@ -95,7 +95,7 @@ const HireUs = () => {
                                 </motion.svg>
                             </div>
                         </span>
-                        <DirectionArrowDown
+                        <DirectionArrowDownLeft
                             className="absolute hidden md:block h-[3em] -left-[3em] top-[0.5em]"
                             show={headlineInView}
                         />

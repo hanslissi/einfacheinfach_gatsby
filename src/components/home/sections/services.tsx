@@ -1,22 +1,28 @@
-import { motion, useScroll } from "framer-motion";
+import { motion, useInView, useScroll } from "framer-motion";
 import React, { useRef } from "react";
 import ExclamationMarkIcon from "../../../assets/exclamation_mark_icon.svg";
 import QuestionMarkIcon from "../../../assets/question_mark_icon.svg";
 import VideoIcon from "../../../assets/video_icon.svg";
 import SectionWrapper from "../../wrappers/section-wrapper";
 import IconInformationCard from "../icon-information-card";
+import DirectionArrowDownLeft from "../../animated-commons/direction-arrow-down-left";
+import DirectionArrowDownRight from "../../animated-commons/direction-arrow-down-right";
 
 const Services = () => {
-    const ref = useRef(null);
+    const refHeadline = useRef(null);
+    const refSecondCard = useRef(null);
+    const refThirdCard = useRef(null);
+    const secondCardInView = useInView(refSecondCard);
+    const thirdCardInView = useInView(refThirdCard);
     const { scrollYProgress } = useScroll({
-        target: ref,
+        target: refHeadline,
         offset: ["end end", "start start"]
     });
 
     return (
         <SectionWrapper id="services">
             <div className="flex flex-col items-center gap-12 md:gap-32">
-                <h1 ref={ref}>Wir erklären - <br />
+                <h1 ref={refHeadline}>Wir erklären - <br />
                     aber <span className="relative inline-block">
                         einfach einfach!
                         <div className="absolute -bottom-[100%] left-0">
@@ -32,22 +38,38 @@ const Services = () => {
                         </div>
                     </span>
                 </h1>
-                <div className="w-full grid grid-cols-2 gap-6 md:grid-cols-3 md:gap-12">
+                <div className="w-full grid grid-cols-1 gap-6 md:grid-cols-3 md:gap-12">
                     <IconInformationCard
+                        className="relative z-40"
                         title="Frage"
                         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut?"
                         icon={QuestionMarkIcon}
-                    />
-                    <IconInformationCard
-                        title="Video"
-                        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut?"
-                        icon={VideoIcon}
-                    />
-                    <IconInformationCard
-                        title="Antwort"
-                        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut?"
-                        icon={ExclamationMarkIcon}
-                    />
+                    >
+                        <DirectionArrowDownLeft
+                            className="absolute h-[150px] -left-6 -bottom-20 md:transform md:-rotate-90 md:-bottom-16 md:left-3/4 lg:h-[12vw] z-30"
+                            show={secondCardInView}
+                        />
+                    </IconInformationCard>
+                    <div ref={refSecondCard}>
+                        <IconInformationCard
+                            className="relative z-20"
+                            title="Video"
+                            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut?"
+                            icon={VideoIcon}
+                        >
+                            <DirectionArrowDownRight
+                                className="absolute h-[150px] -right-6 -bottom-20 md:transform md:-rotate-90 md:-top-14 md:left-3/4 lg:h-[12vw] z-10"
+                                show={thirdCardInView}
+                            />
+                        </IconInformationCard>
+                    </div>
+                    <div ref={refThirdCard}>
+                        <IconInformationCard
+                            title="Antwort"
+                            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut?"
+                            icon={ExclamationMarkIcon}
+                        />
+                    </div>
                 </div>
             </div>
         </SectionWrapper>
