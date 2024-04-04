@@ -5,7 +5,7 @@ interface IconInformationCardProps {
     title: string;
     description: string;
     icon: any;
-    className?: string; // Add className prop
+    className?: string;
 }
 
 const IconInformationCard = ({ title, description, icon, className }: IconInformationCardProps) => {

@@ -3,14 +3,14 @@ import { Variants, motion, useAnimation, useInView } from "framer-motion";
 import React, { useEffect, useRef } from "react";
 import { DURATION_FAST } from "../../constants/animation-constants";
 
-interface IconInformationCardProps {
+interface WorkInformationCardProps {
     title: string;
     description: string;
     thumbnail: any;
     className?: string;
 }
 
-const IconInformationCard = ({ title, description, thumbnail, className }: IconInformationCardProps) => {
+const WorkInformationCard = ({ title, description, thumbnail, className }: WorkInformationCardProps) => {
     // component that fades in when coming into view 
 
     const ref = useRef(null);
@@ -52,4 +52,4 @@ const IconInformationCard = ({ title, description, thumbnail, className }: IconI
     )
 }
 
-export default IconInformationCard;
+export default WorkInformationCard;
