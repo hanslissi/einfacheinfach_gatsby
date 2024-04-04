@@ -4,7 +4,6 @@ import type { HeadFC } from "gatsby";
 import * as React from "react";
 import { useRef } from "react";
 import DiagonalLinePattern from '../assets/patterns/diagonal_line_pattern.png';
-import WavyPattern from '../assets/patterns/wavy_pattern.png';
 import DonutySvg from "../assets/shapes/Donuty.svg";
 import RoundyCrazySvg from "../assets/shapes/Roundy_Crazy.svg";
 import Logo from '../assets/einfacheinfach_logo_blue.svg';
@@ -37,7 +36,6 @@ const HireUs = () => {
     const refParagraph = useRef(null);
     const refSection = useRef(null);
     const { scrollYProgress: scrollYProgressSection } = useScroll();
-    const yParallaxXl = useParallax(scrollYProgressSection, 700);
     const yParallaxMd = useParallax(scrollYProgressSection, 400);
     const yParallaxSm = useParallax(scrollYProgressSection, 200);
     const headlineInView = useInView(refHeadline);
