@@ -4,16 +4,18 @@ import Footer from "./footer";
 
 interface RootLayoutProps {
   children: React.ReactNode
+  nav?: boolean
+  footer?: boolean
 }
 
-const RootLayout = ({ children }: RootLayoutProps) => {
+const RootLayout = ({ children, nav = true, footer = true}: RootLayoutProps) => {
   return (
     <div className="bg-beige">
-      <Nav />
+      {nav && <Nav />}
       <div className="overflow-hidden">
         {children}
       </div>
-      <Footer />
+      {footer && <Footer />}
     </div>
   )
 }

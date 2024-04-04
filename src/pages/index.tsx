@@ -1,4 +1,4 @@
-import type { HeadFC, PageProps } from "gatsby"
+import type { HeadFC } from "gatsby"
 import * as React from "react"
 import Hero from "../components/home/sections/hero"
 import HireCTA from "../components/home/sections/hire-cta"
@@ -8,7 +8,7 @@ import Work from "../components/home/sections/work"
 import RootLayout from "../components/layout/root-layout"
 import { NavContext } from "../context/NavContext"
 
-const IndexPage: React.FC<PageProps> = () => {
+const IndexPage = () => {
   const [spread, setSpread] = React.useState<boolean>(true);
   const [scrollSpreadLocked, setScrollSpreadLocked] = React.useState<boolean>(false);
 

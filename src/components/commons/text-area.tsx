@@ -1,9 +1,8 @@
 import React from "react";
-import { FieldError, FieldErrorsImpl, FieldValues, Merge, RegisterOptions, useFormContext } from "react-hook-form";
+import { FieldValues, RegisterOptions, useFormContext } from "react-hook-form";
 import { findInputError } from "../../util/findInputError";
 import { isFormInvalid } from "../../util/isFormValid";
-import { AnimatePresence, motion } from "framer-motion";
-import { DURATION_FAST } from "../../constants/animation-constants";
+import { AnimatePresence } from "framer-motion";
 import InputError from "./InputError";
 
 interface TextAreaProps {
@@ -36,7 +35,7 @@ const TextArea = ({ id, placeholder, validation, name }: TextAreaProps) => {
             </div>
             <textarea
                 id={id}
-                className="w-full p-5 h-32 font-medium border rounded-md border-slate-300 placeholder:opacity-60"
+                className="w-full p-5 h-32 font-medium border rounded-xl placeholder:opacity-60"
                 placeholder={placeholder}
                 {...register(name, validation)}
             />
