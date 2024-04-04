@@ -5,6 +5,25 @@ import { Variants, motion, useInView } from "framer-motion";
 import ScribbleCircleAround from "../../animated-commons/scribble-circle-around";
 import { DURATION_MEDIUM } from "../../../constants/animation-constants";
 
+const logoVariants: Variants = {
+    idle: {
+        scale: 1,
+        transition: {
+            type: "spring",
+            bounce: 0.6,
+            duration: DURATION_MEDIUM
+        }
+    },
+    hover: {
+        scale: 1.1,
+        transition: {
+            type: "spring",
+            bounce: 0.6,
+            duration: DURATION_MEDIUM
+        }
+    }
+}
+
 const Hero = () => {
     const { spread, scrollSpreadLocked, toggleSpread, setSpread } = useContext(NavContext);
     const ref = React.useRef(null);
@@ -22,28 +41,9 @@ const Hero = () => {
         toggleSpread(true); // lock the scroll spread when clicking logo once.
     }
 
-    const logoVariants: Variants = {
-        idle: {
-            scale: 1,
-            transition: {
-                type: "spring",
-                bounce: 0.6,
-                duration: DURATION_MEDIUM
-            }
-        },
-        hover: {
-            scale: 1.1,
-            transition: {
-                type: "spring",
-                bounce: 0.6,
-                duration: DURATION_MEDIUM
-            }
-        }
-    }
-
     return (
         <section className="h-lvh flex justify-center items-center -mt-20">
-            <motion.button 
+            <motion.button
                 className="relative bg-beige"
                 onClick={handleClickLogo}
                 variants={logoVariants}

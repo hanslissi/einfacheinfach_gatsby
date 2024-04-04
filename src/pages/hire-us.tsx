@@ -1,12 +1,19 @@
-import type { HeadFC } from "gatsby"
-import * as React from "react"
-import RootLayout from "../components/layout/root-layout"
-import ContactForm from "../components/hire-us/contact-form"
-import Logo from '../assets/einfacheinfach_logo_blue.svg';
 import { Link } from "@reach/router";
-import { Variants, motion, useInView } from "framer-motion";
-import { DURATION_FAST, DURATION_SLOW } from "../constants/animation-constants";
+import { Variants, motion, useInView, useScroll } from "framer-motion";
+import type { HeadFC } from "gatsby";
+import * as React from "react";
 import { useRef } from "react";
+import DiagonalLinePattern from '../assets/patterns/diagonal_line_pattern.png';
+import WavyPattern from '../assets/patterns/wavy_pattern.png';
+import DonutySvg from "../assets/shapes/Donuty.svg";
+import RoundyCrazySvg from "../assets/shapes/Roundy_Crazy.svg";
+import Logo from '../assets/einfacheinfach_logo_blue.svg';
+import ContactForm from "../components/hire-us/contact-form";
+import RootLayout from "../components/layout/root-layout";
+import SectionWrapper from "../components/wrappers/section-wrapper";
+import { DURATION_FAST, DURATION_SLOW } from "../constants/animation-constants";
+import useParallax from "../hooks/useParallax";
+import DirectionArrowDown from "../components/animated-commons/direction-arrow-down";
 
 const scribbleUnderlineVariants: Variants = {
     hidden: {
@@ -28,20 +35,52 @@ const scribbleUnderlineVariants: Variants = {
 const HireUs = () => {
     const refHeadline = useRef(null);
     const refParagraph = useRef(null);
+    const refSection = useRef(null);
+    const { scrollYProgress: scrollYProgressSection } = useScroll();
+    const yParallaxXl = useParallax(scrollYProgressSection, 700);
+    const yParallaxMd = useParallax(scrollYProgressSection, 400);
+    const yParallaxSm = useParallax(scrollYProgressSection, 200);
     const headlineInView = useInView(refHeadline);
     const paragraphInView = useInView(refParagraph);
 
     return (
         <RootLayout nav={false}>
             <main>
-                <div className="flex flex-col items-center pb-20">
+                <SectionWrapper ref={refSection} className="flex flex-col items-center pb-20 mt-auto">
+
+                    {/* background parallax shapes begin */}
+                    <motion.img
+                        className="absolute -left-10 top-1/3 md:left-8"
+                        src={RoundyCrazySvg}
+                        style={{ y: yParallaxMd, rotate: yParallaxSm }}
+                    />
+                    <motion.img
+                        className="absolute -right-40 top-3/4 md:top-1/4"
+                        src={DonutySvg}
+                        style={{ y: yParallaxSm }}
+                    />
+                    <motion.div
+                        className="absolute left-4 top-[60%] w-[25%] h-32 md:left-[20%] md:w-[15%]"
+                        style={{ y: yParallaxSm, backgroundImage: `url(${DiagonalLinePattern})`, backgroundRepeat: 'repeat', backgroundSize: '40%' }}
+                    />
+                    <motion.img
+                        className="absolute hidden lg:block -left-32 bottom-1/4 h-40"
+                        src={DonutySvg}
+                        style={{ y: yParallaxMd }}
+                    />
+                    <motion.img
+                        className="absolute hidden md:block right-10 bottom-[10%]"
+                        src={RoundyCrazySvg}
+                        style={{ y: yParallaxMd, rotate: yParallaxSm }}
+                    />
+                    {/* background parallax shapes end */}
                     <Link to="/">
                         <img
                             className="h-12 mt-20 md:h-20"
                             src={Logo}
                         />
                     </Link>
-                    <h1 ref={refHeadline} className="font-bold text-primary mt-20">Hire {" "}
+                    <h1 ref={refHeadline} className="relative font-bold text-primary mt-20">Hire {" "}
                         <span className="relative inline-block">
                             our services!
                             <div className="absolute -bottom-[100%] left-0">
@@ -58,8 +97,12 @@ const HireUs = () => {
                                 </motion.svg>
                             </div>
                         </span>
+                        <DirectionArrowDown
+                            className="absolute hidden md:block h-[3em] -left-[3em] top-[0.5em]"
+                            show={headlineInView}
+                        />
                     </h1>
-                    <ContactForm />
+                    <ContactForm className="md:mt-20"/>
                     <p ref={refParagraph}>
                         We will reply {" "}
                         <span className="relative inline-block">
@@ -79,8 +122,7 @@ const HireUs = () => {
                             </div>
                         </span>
                     </p>
-                </div>
-
+                </SectionWrapper>
             </main>
         </RootLayout>
     )

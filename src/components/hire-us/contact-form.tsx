@@ -7,8 +7,10 @@ import emailjs from "@emailjs/browser"
 import InfinityLoopArrow from "../animated-commons/infinity-loop-arrow";
 import ReCAPTCHA from 'react-google-recaptcha';
 import Modal from "../commons/modal";
-import { AnimatePresence } from "framer-motion";
+import { AnimatePresence, Variants, motion } from "framer-motion";
 import InfoMessage from "../commons/info-message";
+import clsx from "clsx";
+import { DURATION_MEDIUM } from "../../constants/animation-constants";
 
 const emailServiceId = process.env.EMAILJS_SERVICE_ID || ''; // Ensure process.env.EMAILJS_SERVICE_ID is defined
 const emailTemplateId = process.env.EMAILJS_CONTACT_TEMPLATE_ID || ''; // Ensure process.env.EMAILJS_CONTACT_TEMPLATE_ID is defined
@@ -18,8 +20,9 @@ interface ContactFormData {
     fromCompany: string,
     workField: string,
     contactEmail: string,
-    message: string
+    message: string,
 }
+
 
 const inputValidation = {
     required: {
@@ -28,7 +31,30 @@ const inputValidation = {
     }
 }
 
-const ContactForm = () => {
+const submitButtonVariants: Variants = {
+    idle: {
+        scale: 1,
+        transition: {
+            type: "spring",
+            bounce: 0.6,
+            duration: DURATION_MEDIUM
+        }
+    },
+    tapped: {
+        scale: 0.95,
+        transition: {
+            type: "spring",
+            bounce: 0.6,
+            duration: DURATION_MEDIUM
+        }
+    }
+}
+
+interface ContactFormProps {
+    className?: string;
+}
+
+const ContactForm = ({ className }: ContactFormProps) => {
     const [loading, setLoading] = useState(false);
     const [showRecaptcha, setShowRecaptcha] = useState(false);
     const [emailStatus, setEmailStatus] = useState<'idle' | 'success' | 'error'>('idle');
@@ -48,7 +74,7 @@ const ContactForm = () => {
         setLoadingAnimationPlaying(true);
 
         emailjs.send(emailServiceId, emailTemplateId, templateParams, {
-            publicKey: emailjsPublicKey,
+            publicKey: "emailjsPublicKey",
         }).then(
             (response) => {
                 setLoading(false);
@@ -100,87 +126,88 @@ const ContactForm = () => {
     }
 
     return (
-        <SectionWrapper className="flex flex-col items-center">
-            <div className="flex flex-col py-10 max-w-[700px] w-full">
-                <FormProvider {...methods}>
-                    <form
-                        onSubmit={e => e.preventDefault()}
-                        noValidate
-                    >
-                        <div className="flex flex-col gap-5">
-                            <Input
-                                name="fromCompany"
-                                id="fromCompany"
-                                type="text"
-                                placeholder="company name"
-                                validation={inputValidation}
-                            />
-                            <Input
-                                name="workField"
-                                id="workField"
-                                type="text"
-                                placeholder="field of work"
-                                validation={inputValidation}
-                            />
-                            <Input
-                                name="contactEmail"
-                                id="contactEmail"
-                                type="text"
-                                placeholder="contact email"
-                                validation={inputValidation}
-                            />
-                            <TextArea
-                                name="message"
-                                id="message"
-                                type="text"
-                                placeholder="describe to us how we can help your company"
-                                validation={inputValidation}
-                            />
-                            <div className="relative w-full h-32 my-20">
-                                {loadingAnimationPlaying &&
-                                    <InfinityLoopArrow
-                                        className="absolute w-full left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 scale-110 -rotate-6 origin-center"
-                                        duration={2}
-                                        loop={loadingAnimationPlaying}
-                                        onAnimationComplete={handleAnimationComplete}
-                                    />
-                                }
-                                <button
-                                    onClick={handleClickButton}
-                                    disabled={loading}
-                                    className="relative w-full h-full bg-primary text-white rounded-3xl text-4xl"
-                                >
-                                    Send Request
-                                </button>
-                                <div className="flex flex-col items-center mt-4 min-h-8">
-                                    <AnimatePresence initial={false} mode="wait">
-                                        {(emailStatus !== 'idle' && !loadingAnimationPlaying) && (
-                                            <InfoMessage
-                                                message={getInfoMessage()}
-                                                type={emailStatus === 'success' ? 'success' : 'error'}
-                                            />
-                                        )}
-                                    </AnimatePresence>
-                                </div>
-                                <Modal open={showRecaptcha} onClose={() => setShowRecaptcha(false)} >
-                                    <div className="flex flex-col items-center gap-4">
-                                        Please solve the reCAPTCHA to send your request
-                                        <ReCAPTCHA
-                                            className="inline-block"
-                                            sitekey={process.env.RECAPTCHA_SITE_KEY || ''}
-                                            onChange={handleRecaptchaChange}
+        <div className={clsx("relative flex flex-col py-10 max-w-[700px] w-full", className)}>
+            <FormProvider {...methods}>
+                <form
+                    onSubmit={e => e.preventDefault()}
+                    noValidate
+                >
+                    <div className="flex flex-col gap-5">
+                        <Input
+                            name="fromCompany"
+                            id="fromCompany"
+                            type="text"
+                            placeholder="company name"
+                            validation={inputValidation}
+                        />
+                        <Input
+                            name="workField"
+                            id="workField"
+                            type="text"
+                            placeholder="field of work"
+                            validation={inputValidation}
+                        />
+                        <Input
+                            name="contactEmail"
+                            id="contactEmail"
+                            type="text"
+                            placeholder="contact email"
+                            validation={inputValidation}
+                        />
+                        <TextArea
+                            name="message"
+                            id="message"
+                            type="text"
+                            placeholder="describe to us how we can help your company"
+                            validation={inputValidation}
+                        />
+                        <div className="relative w-full h-32 px-10 py-4 md:p-0 my-10">
+                            {loadingAnimationPlaying &&
+                                <InfinityLoopArrow
+                                    className="absolute w-full left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 scale-105 -rotate-6 origin-center md:scale-110"
+                                    duration={2}
+                                    loop={loadingAnimationPlaying}
+                                    onAnimationComplete={handleAnimationComplete}
+                                />
+                            }
+                            <motion.button
+                                className="relative w-full h-full bg-primary text-white rounded-3xl text-4xl"
+                                disabled={loading}
+                                onClick={handleClickButton}
+                                variants={submitButtonVariants}
+                                animate="idle"
+                                whileTap="tapped"
+                            >
+                                Send Request
+                            </motion.button>
+                            <div className="flex flex-col items-center mt-4 min-h-8">
+                                <AnimatePresence initial={false} mode="wait">
+                                    {(emailStatus !== 'idle' && !loadingAnimationPlaying) && (
+                                        <InfoMessage
+                                            message={getInfoMessage()}
+                                            type={emailStatus === 'success' ? 'success' : 'error'}
                                         />
-                                        <button className="underline" onClick={() => setShowRecaptcha(false)}>
-                                            Cancel message request
-                                        </button>
-                                    </div>
-                                </Modal>
+                                    )}
+                                </AnimatePresence>
                             </div>
+                            <Modal open={showRecaptcha} onClose={() => setShowRecaptcha(false)} >
+                                <div className="flex flex-col items-center gap-4">
+                                    Please solve the reCAPTCHA to send your request
+                                    <ReCAPTCHA
+                                        className="inline-block"
+                                        sitekey={process.env.RECAPTCHA_SITE_KEY || ''}
+                                        onChange={handleRecaptchaChange}
+                                    />
+                                    <button className="underline" onClick={() => setShowRecaptcha(false)}>
+                                        Cancel message request
+                                    </button>
+                                </div>
+                            </Modal>
                         </div>
-                    </form>
-                </FormProvider>
-            </div>
-        </SectionWrapper>
+                    </div>
+                </form>
+            </FormProvider>
+        </div>
     )
 }
 
