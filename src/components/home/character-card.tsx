@@ -174,13 +174,13 @@ const CharacterCard = ({ name, role, characterImg, portraitImg }: CharacterCardP
                     initial="idle"
                     animate={tapped ? "tapped" : "idle"}
                 >
-                    <div className="flex flex-row gap-2 items-center xl:gap-4">
+                    <div className="flex flex-row gap-1 items-center md:gap-2 xl:gap-4">
                         <motion.h2 className="font-bold text-base sm:text-2xl xl:text-4xl" variants={fontVariants}>
                             {name}
                         </motion.h2>
                         <motion.hr className="border-[0.5px] w-full" variants={lineVariants}></motion.hr>
                     </div>
-                    <div className="flex flex-row gap-2 items-center xl:gap-4">
+                    <div className="flex flex-row gap-1 items-center md:gap-2 xl:gap-4">
                         <motion.hr className="border-[0.5px] w-full" variants={lineVariants}></motion.hr>
                         <motion.div className="whitespace-nowrap text-[0.6rem] sm:text-xs xl:text-base" variants={fontVariants}>{role}</motion.div>
                     </div>
