@@ -126,13 +126,13 @@ const ContactForm = ({ className }: ContactFormProps) => {
     }
 
     return (
-        <div className={clsx("relative flex flex-col py-10 max-w-[700px] w-full", className)}>
+        <div className={clsx("relative flex flex-col max-w-[700px] w-full", className)}>
             <FormProvider {...methods}>
                 <form
                     onSubmit={e => e.preventDefault()}
                     noValidate
                 >
-                    <div className="flex flex-col gap-5">
+                    <div className="flex flex-col gap-2 md:gap-5">
                         <Input
                             name="fromCompany"
                             id="fromCompany"
