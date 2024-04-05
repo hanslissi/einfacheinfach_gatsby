@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import Input from "../commons/input";
-import SectionWrapper from "../wrappers/section-wrapper";
 import TextArea from "../commons/text-area";
 import emailjs from "@emailjs/browser"
 import InfinityLoopArrow from "../animated-commons/infinity-loop-arrow";
@@ -12,9 +11,10 @@ import InfoMessage from "../commons/info-message";
 import clsx from "clsx";
 import { DURATION_MEDIUM } from "../../constants/animation-constants";
 
-const emailServiceId = process.env.EMAILJS_SERVICE_ID || ''; // Ensure process.env.EMAILJS_SERVICE_ID is defined
-const emailTemplateId = process.env.EMAILJS_CONTACT_TEMPLATE_ID || ''; // Ensure process.env.EMAILJS_CONTACT_TEMPLATE_ID is defined
-const emailjsPublicKey = process.env.EMAILJS_PUBLIC_KEY || ''; // Ensure process.env.EMAILJS_PUBLIC_KEY is defined
+const emailServiceId = process.env.GATSBY_EMAILJS_SERVICE_ID || ''; // Ensure process.env.GATSBY_EMAILJS_SERVICE_ID is defined
+const emailTemplateId = process.env.GATSBY_EMAILJS_CONTACT_TEMPLATE_ID || ''; // Ensure process.env.GATSBY_EMAILJS_CONTACT_TEMPLATE_ID is defined
+const emailjsPublicKey = process.env.GATSBY_EMAILJS_PUBLIC_KEY || ''; // Ensure process.env.GATSBY_EMAILJS_PUBLIC_KEY is defined
+const recaptchaSiteKey = process.env.GATSBY_RECAPTCHA_SITE_KEY || '';
 
 interface ContactFormData {
     fromCompany: string,
@@ -74,7 +74,7 @@ const ContactForm = ({ className }: ContactFormProps) => {
         setLoadingAnimationPlaying(true);
 
         emailjs.send(emailServiceId, emailTemplateId, templateParams, {
-            publicKey: "emailjsPublicKey",
+            publicKey: emailjsPublicKey,
         }).then(
             (response) => {
                 setLoading(false);
@@ -195,7 +195,7 @@ const ContactForm = ({ className }: ContactFormProps) => {
                                     Bitte das reCAPTCHA lösen um Ihre Anfrage zu senden
                                     <ReCAPTCHA
                                         className="inline-block"
-                                        sitekey={process.env.RECAPTCHA_SITE_KEY || ''}
+                                        sitekey={recaptchaSiteKey}
                                         onChange={handleRecaptchaChange}
                                     />
                                     <button className="underline" onClick={() => setShowRecaptcha(false)}>
