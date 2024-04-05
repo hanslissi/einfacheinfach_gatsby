@@ -67,8 +67,8 @@ const InfinityLoopArrow = ({
         >
             <motion.path
                 stroke="#BED4FD"
-                stroke-width="3"
-                stroke-linecap="round"
+                strokeWidth="3"
+                strokeLinecap="round"
                 onAnimationComplete={handleLoopAnimationComplete}
                 initial={"start"}
                 variants={loopVariants}
@@ -77,8 +77,8 @@ const InfinityLoopArrow = ({
             />
             <motion.path
                 stroke="#BED4FD"
-                stroke-width="3"
-                stroke-linecap="round"
+                strokeWidth="3"
+                strokeLinecap="round"
                 onAnimationComplete={handleLoopAnimationDelayedComplete}
                 initial={"start"}
                 variants={loopVariants}

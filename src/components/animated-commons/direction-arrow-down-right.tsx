@@ -36,15 +36,15 @@ const DirectionArrowDownRight = ({ className, show = true }: DirectionArrowDownR
         >
             <motion.path
                 stroke="#150FF4"
-                stroke-width="3"
-                stroke-linecap="round"
+                strokeWidth="3"
+                strokeLinecap="round"
                 strokeDasharray={"4 8"}
                 d="M132.16,213.94c36.39-25.47,61.77-68.33,60.27-112.73C190.93,56.81,152.85-16.38,.07,4.01"
             />
             <motion.path
                 stroke="#FFFCEF"
-                stroke-width="4"
-                stroke-linecap="round"
+                strokeWidth="4"
+                strokeLinecap="round"
                 initial={"visible"}
                 variants={lineVariants}
                 animate={show ? "hidden" : "visible"}
@@ -52,8 +52,8 @@ const DirectionArrowDownRight = ({ className, show = true }: DirectionArrowDownR
             />
             <motion.path
                 stroke="#150FF4"
-                stroke-width="3"
-                stroke-linecap="round"
+                strokeWidth="3"
+                strokeLinecap="round"
                 initial={"hidden"}
                 variants={lineVariants}
                 className={!show ? "hidden" : ""}

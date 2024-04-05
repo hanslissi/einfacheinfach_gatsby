@@ -72,8 +72,8 @@ const ScribbleCircleAround = ({ className, duration = 2, delay = 10, loop = true
                 onAnimationComplete={handleAnimationDefinition}
                 stroke={"#150FF4"}
                 className={clsx(animationState === "on" ? "block" : "hidden")} // needed to conquer the flickering issue
-                stroke-width="3"
-                stroke-linecap="round"
+                strokeWidth="3"
+                strokeLinecap="round"
                 d="M208.1,28.3C175.7,9.8,137,7.1,99.8,4.8C85.5,3.9,71.1,3,57,5.1s-28.2,7.3-38.6,17.1
                 C-1.1,40.7-3.2,72.9,9.2,96.8c19.1,36.5,60.4,50,98.7,54.6c24.6,3,49.5,2.5,74.1-0.5c23.6-2.9,47.7-8.3,66.8-22.3
                 c12.5-9.1,22.5-21.9,27.5-36.5s4.8-31.2-1.4-45.3c-7.9-18-25-30.9-43.5-37.7S193,1,173.3,1.1c-27.2,0-54.6,2.4-81.2,8.3
