@@ -11,7 +11,7 @@ interface IconInformationCardProps {
 
 const IconInformationCard = ({ title, description, icon, children, className }: IconInformationCardProps) => {
     return (
-        <div className="relative w-full h-full mx-auto max-w-[275px]">
+        <div className="relative w-full mx-auto max-w-[275px] max-h-fit">
             {children}
             <div className={clsx("relative w-full h-full bg-beige p-2 border rounded-xl flex flex-col gap-6 md:p-4", className)}>
                 <img src={icon} className="h-[40%]" />
