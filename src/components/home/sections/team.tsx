@@ -113,7 +113,7 @@ const Team = () => {
                     />
                     <CharacterCard
                         name="Hannah"
-                        role="Animator"
+                        role="Graphic Design"
                         characterImg={HannahCharacterImg}
                         portraitImg={HannahPortraitImg}
                     />
