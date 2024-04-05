@@ -41,7 +41,7 @@ const Services = () => {
                     Nach dem Anschauen unserer Videos verstehen deine Kunden alles – klar, einfach und ohne Missverständnisse!
                 </p>
                 <motion.img
-                    className="absolute hidden md:block -right-40 -bottom-1/3 z-10"
+                    className="absolute h-[150px] -bottom-1/2 -right-20 md:h-[300px] md:-right-32"
                     src={DonutySvg}
                     style={{ y: yParallaxSm }}
                 />
@@ -53,7 +53,7 @@ const Services = () => {
                         style={{ y: yParallaxSm, backgroundImage: `url(${DiagonalLinePattern})`, backgroundRepeat: 'repeat', backgroundSize: '40%' }}
                     />
                     <ShortCurvyArrrowLineSvg
-                        className="absolute left-0 -top-1/2 w-[10%] z-10"
+                        className="absolute hidden md:block -left-14 -top-1/2 w-[10%] z-10"
                     />
                     <img className="relative w-full rounded-xl border overflow-hidden" src={VideoPlaceholder}></img>
                 </div>
