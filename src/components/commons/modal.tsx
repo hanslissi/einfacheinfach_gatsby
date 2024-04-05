@@ -15,7 +15,7 @@ const Modal = ({ open, children, onClose }: ModalProps) => {
                     initial="closed"
                     animate="open"
                     exit="closed"
-                    className="relative z-10"
+                    className="relative z-50"
                 >
                     <motion.div
                         variants={{ closed: { opacity: 0 }, open: { opacity: 1 } }}
@@ -23,7 +23,7 @@ const Modal = ({ open, children, onClose }: ModalProps) => {
                         className="fixed inset-0 bg-gray-500 bg-opacity-75"
                     />
 
-                    <div className="fixed pointer-events-none inset-0 overflow-y-auto z-10">
+                    <div className="fixed pointer-events-none inset-0 overflow-y-auto z-50">
                         <div className="flex pointer-events-none min-h-full items-end justify-center p-4 sm:items-center sm:p-0">
                             <motion.div
                                 variants={{
