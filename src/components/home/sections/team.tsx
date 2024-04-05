@@ -26,11 +26,11 @@ const Team = () => {
     const yParallaxMd = useParallax(scrollYProgressSection, 400, true);
 
     return (
-        <SectionWrapper ref={refSection} id="about">
+        <SectionWrapper ref={refSection} id="about" className="container mt-12 md:mt-40">
 
             {/* parallax shapes begin */}
             <motion.img
-                className="absolute hidden md:block -right-20 -top-2/4 h-60"
+                className="absolute hidden lg:block -right-20 -top-2/4 h-60"
                 src={DonutySvg}
                 style={{ y: yParallaxXl }}
             />
@@ -43,10 +43,9 @@ const Team = () => {
             {/* parallax shapes end */}
 
             <div className="flex flex-col gap-10 lg:gap-20 mt-20 items-center">
-                <h1>Unser {" "}
+                <h1 className="text-primary text-center font-bold">Unser {" "}
                     <span className="relative z-10">
                         Team
-
                         {/* shapes begin */}
                         <motion.img
                             className="absolute -right-[0.6em] top-1/3 h-[1.2em]"
@@ -58,12 +57,11 @@ const Team = () => {
                             src={StarySvg}
                             style={{ rotate: yParallaxMd }}
                         />
-                        <div className="absolute h-[5px] aspect-square rounded-full bg-black -right-8 -bottom-5 " />
                         {/* shapes end */}
 
                     </span>
                 </h1>
-                <div className="w-full grid grid-cols-3 gap-6 lg:grid-cols-6 md:gap-20 lg:gap-4 lg:px-20">
+                <div className="w-full grid grid-cols-3 gap-6 px-6 md:gap-20 lg:gap-4 lg:grid-cols-6 lg:px-20">
                     <CharacterCard
                         name="Jonny"
                         role="Web Developer"

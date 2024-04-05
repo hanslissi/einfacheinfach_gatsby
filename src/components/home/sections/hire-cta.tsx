@@ -27,7 +27,7 @@ const HireCTA = () => {
     const inView = useInView(ref);
 
     return (
-        <SectionWrapper id="hire" className="pb-20 md:pb-32">
+        <SectionWrapper id="hire" className="container pb-20 mt-12 md:pb-32 md:mt-40">
             <div className="flex flex-col items-center justify-center gap-10">
                 <h3 ref={ref} className="relative text-center">
                     Interessiert?

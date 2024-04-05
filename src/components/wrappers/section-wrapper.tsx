@@ -10,7 +10,7 @@ interface SectionWrapperProps {
 const SectionWrapper = forwardRef<HTMLElement, SectionWrapperProps>(
     ({ children, id, className }: SectionWrapperProps, ref) => {
         return (
-            <section ref={ref} id={id} className={clsx("container relative mx-auto mt-12 px-4 scroll-my-20 sm:px-0 md:mt-40", className)}>
+            <section ref={ref} id={id} className={clsx("relative mx-auto scroll-my-20", className)}>
                 {children}
             </section>
         );
