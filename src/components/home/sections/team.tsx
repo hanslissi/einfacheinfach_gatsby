@@ -1,11 +1,10 @@
 import React, { useRef } from "react";
 import SectionWrapper from "../../wrappers/section-wrapper";
 import CharacterCard from "../character-card";
-import { Variants, motion, useAnimation, useScroll } from "framer-motion";
+import { motion, useScroll } from "framer-motion";
 import useParallax from "../../../hooks/useParallax";
 import StarySvg from "../../../assets/shapes/Stary.svg";
 import DonutySvg from "../../../assets/shapes/Donuty.svg";
-import WavingHandImg from "../../../assets/waving_hand.png";
 import RoundyCrazySvg from "../../../assets/shapes/Roundy_Crazy.svg";
 import JonnyCharacterImg from "../../../assets/pictures/characters/jonny_character.svg";
 import BettiCharacterImg from "../../../assets/pictures/characters/betti_character.svg";
@@ -22,37 +21,9 @@ import HannahPortraitImg from '../../../assets/pictures/team/hannah.jpg';
 
 const Team = () => {
     const refSection = useRef(null);
-    const wavingAnimationController = useAnimation();
     const { scrollYProgress: scrollYProgressSection } = useScroll();
     const yParallaxXl = useParallax(scrollYProgressSection, 700);
     const yParallaxMd = useParallax(scrollYProgressSection, 400, true);
-
-    const waveVariants: Variants = {
-        idle: {
-            rotate: 0,
-            transition: {
-                type: "spring",
-                bounce: 0.7,
-                duration: 1
-            }
-        },
-        hover: {
-            rotate: 10,
-            transition: {
-                type: "spring",
-                bounce: 0.7,
-                duration: 1
-            }
-        }
-    }
-
-    const handleHoverStartWaveButton = () => {
-        wavingAnimationController.start("hover");
-    }
-
-    const handleHoverEndWaveButton = () => {
-        wavingAnimationController.start("idle");
-    }
 
     return (
         <SectionWrapper ref={refSection} id="about">
@@ -107,13 +78,13 @@ const Team = () => {
                     />
                     <CharacterCard
                         name="Raffa"
-                        role="UI Designer"
+                        role="Screen Design"
                         characterImg={RaffaCharacterImg}
                         portraitImg={RaffaPortraitImg}
                     />
                     <CharacterCard
                         name="Hannah"
-                        role="Graphic Design"
+                        role="Branding"
                         characterImg={HannahCharacterImg}
                         portraitImg={HannahPortraitImg}
                     />
@@ -125,24 +96,11 @@ const Team = () => {
                     />
                     <CharacterCard
                         name="Beyza"
-                        role="Creative Director"
+                        role="Social Media"
                         characterImg={BeyzaCharacterImg}
                         portraitImg={BeyzaPortraitImg}
                     />
                 </div>
-                <button
-                    className="text-xl md:text-2xl"
-                    onMouseEnter={handleHoverStartWaveButton}
-                    onMouseLeave={handleHoverEndWaveButton}
-                >
-                    Winke dem team zu!
-                    <motion.img
-                        src={WavingHandImg}
-                        className="h-14 inline-block"
-                        variants={waveVariants}
-                        animate={wavingAnimationController}
-                    />
-                </button>
             </div>
         </SectionWrapper>
     )

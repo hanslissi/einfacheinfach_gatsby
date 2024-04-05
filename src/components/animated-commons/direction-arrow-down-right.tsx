@@ -35,7 +35,7 @@ const DirectionArrowDownRight = ({ className, show = true }: DirectionArrowDownR
             className={clsx(className)}
         >
             <motion.path
-                stroke="#150FF4"
+                stroke="#0047ab"
                 strokeWidth="3"
                 strokeLinecap="round"
                 strokeDasharray={"4 8"}
@@ -51,7 +51,7 @@ const DirectionArrowDownRight = ({ className, show = true }: DirectionArrowDownR
                 d="M132.16,213.94c36.39-25.47,61.77-68.33,60.27-112.73C190.93,56.81,152.85-16.38,.07,4.01"
             />
             <motion.path
-                stroke="#150FF4"
+                stroke="#0047ab"
                 strokeWidth="3"
                 strokeLinecap="round"
                 initial={"hidden"}
