@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="b" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 101 19.95">
+  <defs>
+    <clipPath id="d">
+      <rect width="101" height="19.95" style="fill: none;"/>
+    </clipPath>
+  </defs>
+  <g id="c" data-name="Layer 1">
+    <g style="clip-path: url(#d);">
+      <path d="M0,5.56c21.67,0,28.7-9.95,50.5-9.95s25.05,9.95,50.5,9.95" style="fill: none; stroke: #0047ab; stroke-miterlimit: 10;"/>
+      <path d="M0,15.51c21.67,0,28.7-9.95,50.5-9.95s25.05,9.95,50.5,9.95" style="fill: none; stroke: #0047ab; stroke-miterlimit: 10;"/>
+      <path d="M0,25.46c21.67,0,28.7-9.95,50.5-9.95s25.05,9.95,50.5,9.95" style="fill: none; stroke: #0047ab; stroke-miterlimit: 10;"/>
+    </g>
+  </g>
+</svg>

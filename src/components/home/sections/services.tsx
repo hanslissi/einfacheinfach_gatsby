@@ -5,7 +5,7 @@ import VideoPlaceholder from '../../../assets/animation_frame.png';
 import DonutySvg from '../../../assets/shapes/Donuty.svg';
 import useParallax from '../../../hooks/useParallax';
 import ShortCurvyArrrowLineSvg from '../../animated-commons/short-curvy-arrow-line';
-import DiagonalLinePattern from '../../../assets/patterns/diagonal_line_pattern.png';
+import DiagonalLinePattern from '../../../assets/patterns/diagonal_line_pattern.svg';
 
 const Services = () => {
     const refHeadline = useRef(null);

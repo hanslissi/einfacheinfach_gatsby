@@ -7,8 +7,8 @@ import TimWorkThumbnail from "../../../assets/pictures/works/tim_work_thumbnail.
 import PhoneWorkThumbnail from "../../../assets/pictures/works/phone_work_thumbnail.png";
 import RoundyCrazySvg from "../../../assets/shapes/Roundy_Crazy.svg";
 import DonutySvg from "../../../assets/shapes/Donuty.svg";
-import WavyPattern from '../../../assets/patterns/wavy_pattern.png';
-import DiagonalLinePattern from '../../../assets/patterns/diagonal_line_pattern.png';
+import WavyPattern from '../../../assets/patterns/wavy_pattern.svg';
+import DiagonalLinePattern from '../../../assets/patterns/diagonal_line_pattern.svg';
 import { Variants, motion, useInView, useScroll, useTransform } from "framer-motion";
 import useParallax from "../../../hooks/useParallax";
 import { DURATION_FAST, DURATION_SLOW } from "../../../constants/animation-constants";
@@ -54,7 +54,7 @@ const Work = () => {
             {/* background parallax shapes begin */}
             <motion.div
                 className="absolute -right-10 top-[15%] w-[15%] h-32"
-                style={{ y: yParallaxMd, backgroundImage: `url(${WavyPattern})`, backgroundRepeat: 'repeat', backgroundSize: '40%' }}
+                style={{ y: yParallaxMd, backgroundImage: `url(${WavyPattern})`, backgroundRepeat: 'repeat', backgroundSize: '44%' }}
             />
             <motion.img
                 className="absolute hidden md:block -left-10 top-1/3 md:left-8 z-10"

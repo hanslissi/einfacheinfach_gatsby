@@ -3,7 +3,7 @@ import { Variants, motion, useInView, useScroll } from "framer-motion";
 import type { HeadFC } from "gatsby";
 import * as React from "react";
 import { useRef } from "react";
-import DiagonalLinePattern from '../assets/patterns/diagonal_line_pattern.png';
+import DiagonalLinePattern from '../assets/patterns/diagonal_line_pattern.svg';
 import DonutySvg from "../assets/shapes/Donuty.svg";
 import RoundyCrazySvg from "../assets/shapes/Roundy_Crazy.svg";
 import Logo from '../assets/einfacheinfach_logo_blue.svg';

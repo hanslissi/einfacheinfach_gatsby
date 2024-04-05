@@ -1,11 +1,11 @@
 import React, { useMemo } from 'react';
-import CrossPattern from '../../assets/patterns/cross_pattern.png';
-import DiagonalLinePattern from '../../assets/patterns/diagonal_line_pattern.png';
-import GridPattern from '../../assets/patterns/grid_pattern.png';
-import WavyPattern from '../../assets/patterns/wavy_pattern.png';
+import CrossPattern from '../../assets/patterns/cross_pattern.svg';
+import DiagonalLinePattern from '../../assets/patterns/diagonal_line_pattern.svg';
+import GridPattern from '../../assets/patterns/grid_pattern.svg';
+import WavyPattern from '../../assets/patterns/wavy_pattern.svg';
 import { getRandomElement } from '../../util/arrayUtils';
 import { DURATION_SUPERFAST, DURATION_FAST } from '../../constants/animation-constants';
-import { Variants, motion, useAnimation } from 'framer-motion';
+import { Variants, motion } from 'framer-motion';
 
 interface CharacterCardProps {
     name: string;
