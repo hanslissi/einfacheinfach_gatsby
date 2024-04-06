@@ -49,7 +49,7 @@ const WorkInformationCard = ({ title, description, url, thumbnail, className }: 
                 animate={fadeInAnimation}
             >
                 <motion.div
-                    className="absolute inset-0 flex flex-col items-center justify-center gap-2 px-20 text-white text-center bg-gradient-to-b from-tertiary to-transparent"
+                    className="absolute inset-0 flex flex-col items-center justify-center gap-2 px-20 text-white text-center bg-gradient-to-b from-primary to-transparent"
                     whileHover={{ opacity: 1 }}
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 0 }}

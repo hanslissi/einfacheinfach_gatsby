@@ -9,7 +9,6 @@ module.exports = {
       colors: {
         "primary": "#0047ab",
         "secondary": "#E2E2E2",
-        "tertiary": "#9747FF",
         "beige": "#FFFCEF"
       },
       borderColor: {
