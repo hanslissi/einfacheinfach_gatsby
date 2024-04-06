@@ -10,13 +10,13 @@ import JonnyCharacterImg from "../../../assets/pictures/characters/jonny_charact
 import BettiCharacterImg from "../../../assets/pictures/characters/betti_character.svg";
 import BeyzaCharacterImg from "../../../assets/pictures/characters/beyza_character.svg";
 import NiciCharacterImg from "../../../assets/pictures/characters/nici_character.svg";
-import RaffaCharacterImg from "../../../assets/pictures/characters/raffa_character.svg";
+import RafaCharacterImg from "../../../assets/pictures/characters/rafa_character.svg";
 import HannahCharacterImg from "../../../assets/pictures/characters/hannah_character.svg";
 import JonnyPortraitImg from '../../../assets/pictures/team/jonny.jpg';
 import BettiPortraitImg from '../../../assets/pictures/team/betti.jpg';
 import BeyzaPortraitImg from '../../../assets/pictures/team/beyza.jpg';
 import NiciPortraitImg from '../../../assets/pictures/team/nici.jpg';
-import RaffaPortraitImg from '../../../assets/pictures/team/raffa.jpg';
+import RafaPortraitImg from '../../../assets/pictures/team/rafa.jpg';
 import HannahPortraitImg from '../../../assets/pictures/team/hannah.jpg';
 
 const Team = () => {
@@ -75,10 +75,10 @@ const Team = () => {
                         portraitImg={BettiPortraitImg}
                     />
                     <CharacterCard
-                        name="Raffa"
+                        name="Rafa"
                         role="Screen Design"
-                        characterImg={RaffaCharacterImg}
-                        portraitImg={RaffaPortraitImg}
+                        characterImg={RafaCharacterImg}
+                        portraitImg={RafaPortraitImg}
                     />
                     <CharacterCard
                         name="Hannah"
