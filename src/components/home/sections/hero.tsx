@@ -57,7 +57,7 @@ const Hero = () => {
                     src={Logo}
                 />
                 <ScribbleCircleAround
-                    className="pointer-events-none absolute w-[150%] -left-1/4 -top-1/3"
+                    className="absolute pointer-events-none w-[150%] -left-1/4 -top-1/3"
                     loop={spread}
                     delay={2}
                 />

@@ -105,20 +105,23 @@ const Work = () => {
             <div className="relative w-full mt-2 flex flex-col justify-center gap-10 px-10 py-10 md:py-24 md:gap-20 md:mt-0 md:px-24 lg:px-60" ref={refWorkCardsDiv}>
                 <LongCurvyArrrowLineSvg pathLength={pathLength} className="absolute inset-0 z-0 h-full w-full" />
                 <WorkInformationCard
-                    title="Meldeamt"
-                    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    title="Geheimes Projekt"
+                    description="Coming Soon!"
+                    url="/coming-soon"
                     thumbnail={MeldeamtWorkThumbnail}
                     className="z-20"
                 />
                 <WorkInformationCard
-                    title="Tim"
-                    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    title="Super Geheimes Projekt"
+                    description="Coming Soon!"
+                    url="/coming-soon"
                     thumbnail={TimWorkThumbnail}
                     className="z-20"
                 />
                 <WorkInformationCard
-                    title="Phone"
-                    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    title="Pssst! Geheimes Projekt"
+                    description="Coming Soon!"
+                    url="/coming-soon"
                     thumbnail={PhoneWorkThumbnail}
                     className="z-20"
                 />
