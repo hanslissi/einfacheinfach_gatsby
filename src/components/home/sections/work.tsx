@@ -107,21 +107,21 @@ const Work = () => {
                 <WorkInformationCard
                     title="Geheimes Projekt"
                     description="Coming Soon!"
-                    url="/coming-soon"
+                    url="/"
                     thumbnail={MeldeamtWorkThumbnail}
                     className="z-20"
                 />
                 <WorkInformationCard
                     title="Super Geheimes Projekt"
                     description="Coming Soon!"
-                    url="/coming-soon"
+                    url="/"
                     thumbnail={TimWorkThumbnail}
                     className="z-20"
                 />
                 <WorkInformationCard
                     title="Pssst! Geheimes Projekt"
                     description="Coming Soon!"
-                    url="/coming-soon"
+                    url="/"
                     thumbnail={PhoneWorkThumbnail}
                     className="z-20"
                 />
