@@ -126,7 +126,7 @@ const ContactForm = ({ className }: ContactFormProps) => {
     }
 
     return (
-        <div className={clsx("relative flex flex-col max-w-[700px] w-full", className)}>
+        <div className={clsx("relative flex flex-col max-w-[700px] px-4 w-full", className)}>
             <FormProvider {...methods}>
                 <form
                     onSubmit={e => e.preventDefault()}
@@ -161,7 +161,7 @@ const ContactForm = ({ className }: ContactFormProps) => {
                             placeholder="Erzählen Sie uns wie wir Ihnen helfen können"
                             validation={inputValidation}
                         />
-                        <div className="relative w-full h-32 px-10 py-4 md:p-0 my-10">
+                        <div className="relative w-full h-32 px-10 py-6 md:p-0 my-10">
                             {loadingAnimationPlaying &&
                                 <InfinityLoopArrow
                                     className="absolute w-full left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 scale-105 -rotate-6 origin-center md:scale-110"
