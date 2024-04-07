@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import { Variants, motion, useAnimation, useInView } from "framer-motion";
-import React, { useEffect, useRef } from "react";
+import React, { ReactNode, useEffect, useRef } from "react";
 import { DURATION_FAST } from "../../constants/animation-constants";
 import { Link } from "gatsby";
 
@@ -8,11 +8,11 @@ interface WorkInformationCardProps {
     title: string;
     description: string;
     url: string;
-    thumbnail: any;
+    thumbnailImage: ({ }: any) => ReactNode;
     className?: string;
 }
 
-const WorkInformationCard = ({ title, description, url, thumbnail, className }: WorkInformationCardProps) => {
+const WorkInformationCard = ({ title, description, url, thumbnailImage, className }: WorkInformationCardProps) => {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true });
 
@@ -48,6 +48,7 @@ const WorkInformationCard = ({ title, description, url, thumbnail, className }: 
                 initial="hidden"
                 animate={fadeInAnimation}
             >
+                {thumbnailImage?.({ className: "object-cover w-full h-full", alt: title })}
                 <motion.div
                     className="absolute inset-0 flex flex-col items-center justify-center gap-2 px-20 text-white text-center bg-gradient-to-b from-primary to-transparent"
                     whileHover={{ opacity: 1 }}
@@ -57,7 +58,6 @@ const WorkInformationCard = ({ title, description, url, thumbnail, className }: 
                     <h2 className="font-bold">{title}</h2>
                     <p>{description}</p>
                 </motion.div>
-                <img src={thumbnail} className="object-cover w-full h-full" />
             </motion.div>
         </Link>
     )

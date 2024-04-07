@@ -2,7 +2,7 @@
 <svg id="b" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100.55 98.81">
   <g id="c" data-name="Layer 1">
     <g>
-      <line x1="5.72" x2="5.72" y2="98.81" style="fill: none; stroke: #0047ab; stroke-miterlimit: 10; stroke-width: 2px;"/>
+      <line x1="5.72" x2="5.72" y2="98.81" style="fill: none; stroke: #0047ab; stroke-miterlimit: 10; strokeWidth: 2px;"/>
       <line x1="16.44" x2="16.44" y2="98.81" style="fill: none; stroke: #0047ab; stroke-miterlimit: 10;"/>
       <line x1="27.16" x2="27.16" y2="98.81" style="fill: none; stroke: #0047ab; stroke-miterlimit: 10;"/>
       <line x1="37.88" x2="37.88" y2="98.81" style="fill: none; stroke: #0047ab; stroke-miterlimit: 10;"/>
@@ -11,7 +11,7 @@
       <line x1="70.04" x2="70.04" y2="98.81" style="fill: none; stroke: #0047ab; stroke-miterlimit: 10;"/>
       <line x1="80.76" x2="80.76" y2="98.81" style="fill: none; stroke: #0047ab; stroke-miterlimit: 10;"/>
       <line x1="91.48" x2="91.48" y2="98.81" style="fill: none; stroke: #0047ab; stroke-miterlimit: 10;"/>
-      <line y1="4.98" x2="100.55" y2="4.98" style="fill: none; stroke: #0047ab; stroke-miterlimit: 10; stroke-width: 2px;"/>
+      <line y1="4.98" x2="100.55" y2="4.98" style="fill: none; stroke: #0047ab; stroke-miterlimit: 10; strokeWidth: 2px;"/>
       <line y1="15.66" x2="100.55" y2="15.66" style="fill: none; stroke: #0047ab; stroke-miterlimit: 10;"/>
       <line y1="26.34" x2="100.55" y2="26.34" style="fill: none; stroke: #0047ab; stroke-miterlimit: 10;"/>
       <line y1="37.02" x2="100.55" y2="37.02" style="fill: none; stroke: #0047ab; stroke-miterlimit: 10;"/>

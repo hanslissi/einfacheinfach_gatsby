@@ -2,9 +2,6 @@ import React, { useRef } from "react";
 import SectionWrapper from "../../wrappers/section-wrapper";
 import WorkInformationCard from "../work-information-card";
 import LongCurvyArrrowLineSvg from "../../animated-commons/long-curvy-arrow-line";
-import MeldeamtWorkThumbnail from "../../../assets/pictures/works/meldeamt_work_thumbnail.png";
-import TimWorkThumbnail from "../../../assets/pictures/works/tim_work_thumbnail.png";
-import PhoneWorkThumbnail from "../../../assets/pictures/works/phone_work_thumbnail.png";
 import RoundyCrazySvg from "../../../assets/shapes/Roundy_Crazy.svg";
 import DonutySvg from "../../../assets/shapes/Donuty.svg";
 import WavyPattern from '../../../assets/patterns/wavy_pattern.svg';
@@ -12,6 +9,7 @@ import DiagonalLinePattern from '../../../assets/patterns/diagonal_line_pattern.
 import { Variants, motion, useInView, useScroll, useTransform } from "framer-motion";
 import useParallax from "../../../hooks/useParallax";
 import { DURATION_FAST, DURATION_SLOW } from "../../../constants/animation-constants";
+import { StaticImage } from "gatsby-plugin-image";
 
 const scribbleUnderlineVariants: Variants = {
     hidden: {
@@ -92,8 +90,8 @@ const Work = () => {
                             <motion.path
                                 d="M285.77,1.17c-46.92-1.24-93.94-.52-140.9,.2C104.48,1.99,63.58,.72,23.56,4.15c-5.89,.5-17.05,1.08-21.55,3.08-.89,.4-1.7,.95-1.48,1.54,.31,.8,2.24,1.11,3.85,1.24,19.26,1.57,39.55,1.39,59.06,2.18,24.03,.96,48.03,2.1,71.95,3.55,14.52,.88,28.93,2,42.33,5.07,6.72,1.54-3.11,2.86-5.45,3.22-5.93,.92-12.04,1.53-17.85,2.63-8.43,1.6-22.6,4.23-28.2,7.96-3.86,2.57-1.75,5.33,2.98,7.04,3.48,1.26,7.68,2.02,10.79,3.5"
                                 stroke="#0047ab"
-                                stroke-width="2"
-                                stroke-linecap="round"
+                                strokeWidth="2"
+                                strokeLinecap="round"
                                 variants={scribbleUnderlineVariants}
                                 initial="hidden"
                                 animate={paragraphInView ? "visible" : "hidden"}
@@ -108,21 +106,45 @@ const Work = () => {
                     title="Geheimes Projekt"
                     description="Coming Soon!"
                     url="/"
-                    thumbnail={MeldeamtWorkThumbnail}
+                    thumbnailImage={
+                        (props) => (
+                            <StaticImage
+                                className={props.className}
+                                alt={props.title}
+                                src={"../../../assets/pictures/works/meldeamt_work_thumbnail.png"}
+                            />
+                        )
+                    }
                     className="z-20"
                 />
                 <WorkInformationCard
                     title="Super Geheimes Projekt"
                     description="Coming Soon!"
                     url="/"
-                    thumbnail={TimWorkThumbnail}
+                    thumbnailImage={
+                        (props) => (
+                            <StaticImage
+                                className={props.className}
+                                alt={props.title}
+                                src={"../../../assets/pictures/works/phone_work_thumbnail.png"}
+                            />
+                        )
+                    }
                     className="z-20"
                 />
                 <WorkInformationCard
                     title="Pssst! Geheimes Projekt"
                     description="Coming Soon!"
                     url="/"
-                    thumbnail={PhoneWorkThumbnail}
+                    thumbnailImage={
+                        (props) => (
+                            <StaticImage
+                                className={props.className}
+                                alt={props.title}
+                                src={"../../../assets/pictures/works/tim_work_thumbnail.png"}
+                            />
+                        )
+                    }
                     className="z-20"
                 />
             </div>
