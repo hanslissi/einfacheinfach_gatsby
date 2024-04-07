@@ -142,7 +142,7 @@ const Work = () => {
             <StaticImage
               className={props.className}
               alt={props.title}
-              src={"../../../assets/pictures/works/meldeamt_work_thumbnail.png"}
+              src={"../../../assets/pictures/works/secret_project_1.png"}
             />
           )}
           className="z-20"
@@ -155,7 +155,7 @@ const Work = () => {
             <StaticImage
               className={props.className}
               alt={props.title}
-              src={"../../../assets/pictures/works/phone_work_thumbnail.png"}
+              src={"../../../assets/pictures/works/secret_project_2.png"}
             />
           )}
           className="z-20"
@@ -168,7 +168,7 @@ const Work = () => {
             <StaticImage
               className={props.className}
               alt={props.title}
-              src={"../../../assets/pictures/works/tim_work_thumbnail.png"}
+              src={"../../../assets/pictures/works/secret_project_3.png"}
             />
           )}
           className="z-20"
