@@ -1,6 +1,6 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import SectionWrapper from "../../wrappers/section-wrapper";
-import { Variants, motion, useAnimation, useInView } from "framer-motion";
+import { Variants, motion, useInView } from "framer-motion";
 import {
   DURATION_FAST,
   DURATION_SLOW,
