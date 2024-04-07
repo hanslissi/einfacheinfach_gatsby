@@ -3,22 +3,22 @@
 @tailwind utilities;
 
 /* Link from Adobe Fonts Web Project */
-@import url('https://use.typekit.net/iwz8ibl.css');
+@import url("https://use.typekit.net/iwz8ibl.css");
 
 @layer base {
-    h1 {
-        @apply font-fancy text-3xl md:text-6xl;
-    }
+  h1 {
+    @apply font-fancy text-3xl md:text-6xl;
+  }
 
-    h2 {
-        @apply font-fancy text-2xl md:text-4xl;
-    }
+  h2 {
+    @apply font-fancy text-2xl md:text-4xl;
+  }
 
-    h3 {
-        @apply font-fancy text-xl md:text-2xl;
-    }
+  h3 {
+    @apply font-fancy text-xl md:text-2xl;
+  }
 
-    p {
-        @apply font-sans text-sm md:text-lg lg:text-xl;
-    }
+  p {
+    @apply font-sans text-sm md:text-lg lg:text-xl;
+  }
 }

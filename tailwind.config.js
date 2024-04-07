@@ -7,19 +7,18 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "primary": "#0047ab",
-        "secondary": "#E2E2E2",
-        "beige": "#FFFCEF"
+        primary: "#0047ab",
+        secondary: "#E2E2E2",
+        beige: "#FFFCEF",
       },
       borderColor: {
-        DEFAULT: 'black'
+        DEFAULT: "black",
       },
       fontFamily: {
         fancy: ["century-gothic", "Verdana", "sans-serif"],
-        sans: ["greycliff-cf", "sans-serif"]
-      }
+        sans: ["greycliff-cf", "sans-serif"],
+      },
     },
   },
   plugins: [],
-}
-
+};
