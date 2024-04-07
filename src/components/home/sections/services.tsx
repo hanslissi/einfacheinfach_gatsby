@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import SectionWrapper from '../../wrappers/section-wrapper';
 import { useScroll, motion } from 'framer-motion';
-import VideoPlaceholder from '../../../assets/animation_frame.png';
+import EinfachEinfachTrailer from '../../../assets/videos/einfacheinfach_animation.mp4';
 import DonutySvg from '../../../assets/shapes/Donuty.svg';
 import useParallax from '../../../hooks/useParallax';
 import ShortCurvyArrrowLineSvg from '../../animated-commons/short-curvy-arrow-line';
@@ -55,7 +55,12 @@ const Services = () => {
                     <ShortCurvyArrrowLineSvg
                         className="absolute hidden md:block -left-14 -top-1/2 w-[10%] z-10"
                     />
-                    <img className="relative w-full rounded-xl border overflow-hidden" src={VideoPlaceholder}></img>
+                    <video
+                        className="relative w-full rounded-xl border overflow-hidden"
+                        controls
+                    >
+                        <source src={EinfachEinfachTrailer} type="video/mp4"/>
+                    </video>
                 </div>
             </div>
         </SectionWrapper>
